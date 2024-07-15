@@ -1,0 +1,1508 @@
+{
+    "products":
+
+[
+    {
+      "id": 1,
+      "name": "Cetaphil Gentle Skin Cleanser",
+      "category": "cleanser",
+       "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_58fa4a3a-8d3a-4ba6-b083-fca4bf8ae5d2?wid=488&hei=488&fmt=pjpeg",
+      "description": "A mild, non-irritating cleanser that gently removes dirt and impurities without stripping the skin's natural oils.",
+      "brand": "Cetaphil",
+      "price": 10,
+      "ingredients": ["Water", "Cetyl Alcohol", "Propylene Glycol", "Sodium Lauryl Sulfate"]
+    },
+    {
+        "id": 2,
+        "name": "La Roche-Posay Toleriane Hydrating Gentle Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dw8b2f3571/product/March%202023%20packshot%20updates/Toleriane_HydratingGentleCleanser_400ml-Pump.jpg",
+        "description": "A hydrating and soothing cleanser for sensitive skin, formulated with Prebiotic Thermal Water to cleanse and hydrate without irritation.",
+        "brand": "La Roche-Posay",
+        "price": 15,
+        "ingredients": ["Water", "Glycerin", "Ceramide NP", "Niacinamide"]
+      },
+      {
+        "id": 3,
+        "name": "Neutrogena Hydro Boost Hydrating Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://ntg-catalog.imgix.net/products/6806422/6806422_Carousel_1.webp?fm=jpg&auto=format&w=1200&h=1443&fit=crop",
+        "description": "A refreshing gel cleanser that effectively removes dirt, oil, and makeup while boosting hydration with hyaluronic acid.",
+        "brand": "Neutrogena",
+        "price": 11.59,
+        "ingredients": ["Water", "Glycerin", "Cocamidopropyl Hydroxysultaine", "Sodium Hyaluronate"]
+      },
+      {
+        "id": 4,
+        "name": "CeraVe Hydrating Facial Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/51DbQev1thL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A non-foaming, gentle cleanser enriched with ceramides and hyaluronic acid to hydrate and restore the skin's barrier.",
+        "brand": "CeraVe",
+        "price": 12,
+        "ingredients": ["Water", "Glycerin", "Ceramide NP", "Hyaluronic Acid"]
+      },
+      {
+        "id": 5,
+        "name": "Clinique Liquid Facial Soap Mild",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s899070-main-zoom.jpg?fm=jpg&auto=format&w=1200&h=1443&fit=crop",
+        "description": "A gentle, oil-free formula that cleanses effectively without stripping the skin, maintaining its moisture balance.",
+        "brand": "Clinique",
+        "price": 26,
+        "ingredients": ["Water", "Sodium Laureth Sulfate", "Glycerin", "Cocamidopropyl Hydroxysultaine"]
+      },
+      {
+        "id": 6,
+        "name": "The Ordinary Squalane Cleanser",
+        "category": "balm",
+        "imageUrl": "https://m.media-amazon.com/images/I/61-YiLVBK2L.jpg",
+        "description": "A balm-to-oil cleanser that removes makeup and impurities while leaving the skin feeling clean and moisturized.",
+        "brand": "The Ordinary",
+        "price": 10.50,
+        "ingredients": ["Squalane", "Caprylic/Capric Triglyceride", "Glycerin", "Sucrose Laurate"]
+      },
+      {
+        "id": 7,
+        "name": "Bioderma Sensibio H2O Micellar Water",
+        "category": "cleanser",
+        "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_9bdc826a-d41d-46f9-b51d-0a9fc28e547d?wid=488&hei=488&fmt=pjpeg",
+        "description": "A no-rinse micellar water cleanser that gently removes makeup and cleanses sensitive skin without causing irritation.",
+        "brand": "Bioderma",
+        "price": 12.99,
+        "ingredients": ["Water", "PEG-6 Caprylic/Capric Glycerides", "Cucumis Sativus Fruit Extract", "Mannitol"]
+      },
+      {
+        "id": 8,
+        "name": "Glossier Milky Jelly Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/41PZrZXRAtL.jpg",
+        "description": "A conditioning gel cleanser that dissolves makeup and cleanses skin without leaving it feeling tight or dry.",
+        "brand": "Glossier",
+        "price": 22,
+        "ingredients": ["Water", "Rosa Damascena Flower Water", "Propanediol", "Coco-Glucoside"]
+      },
+      {
+        "id": 9,
+        "name": "Fresh Soy Face Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.fresh.com/dw/image/v2/BDJQ_PRD/on/demandware.static/-/Sites-fresh_master_catalog/default/dwa5b0aa70/product_images/H00006284_main_pdp.jpg?sw=800&sh=800&bgcolor=F7F7F8&sfrm=jpg",
+        "description": "A gentle gel cleanser infused with soy proteins that cleanses and tones the skin while maintaining hydration.",
+        "brand": "Fresh",
+        "price": 74,
+        "ingredients": ["Water", "Glycerin", "Soybean Oil", "Cucumber Fruit Extract"]
+      },
+      {
+        "id": 10,
+        "name": "First Aid Beauty Face Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s1217710-main-zoom.jpg?imwidth=315",
+        "description": "A fragrance-free cleanser that effectively removes makeup, dirt, and grime while soothing and hydrating the skin.",
+        "brand": "First Aid Beauty",
+        "price": 18.99,
+        "ingredients": ["Water", "Sodium Cocoyl Isethionate", "Glycerin", "Cocamidopropyl Hydroxysultaine"]
+      },
+      {
+        "id": 11,
+        "name": "Kiehl's Ultra Facial Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/61YU57mSbHL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A mild cleanser that thoroughly cleanses skin without over-drying, leaving it soft and refreshed.",
+        "brand": "Kiehl's",
+        "price": 20,
+        "ingredients": ["Water", "Sodium Laureth Sulfate", "Cocamidopropyl Betaine", "Glycerin"]
+      },
+      {
+        "id": 12,
+        "name": "Murad AHA/BHA Exfoliating Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/61v92ujTS9L._AC_UF1000,1000_QL80_.jpg",
+        "description": "An intensive cleanser that exfoliates and polishes away dullness while smoothing the skin's texture.",
+        "brand": "Murad",
+        "price": 46,
+        "ingredients": ["Water", "Sodium Laureth Sulfate", "Jojoba Esters", "Salicylic Acid"]
+      },
+      {
+        "id": 13,
+        "name": "Peter Thomas Roth Water Drench Cloud Cream Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.bangerhead.no/bilder/artiklar/B075080.jpg?m=1647505645",
+        "description": "A non-stripping cleanser that removes makeup and impurities while hydrating with hyaluronic acid and ceramides.",
+        "brand": "Peter Thomas Roth",
+        "price": 32,
+        "ingredients": ["Water", "Sodium Cocoyl Isethionate", "Glycerin", "Sodium Hyaluronate"]
+      },
+      {
+        "id": 14,
+        "name": "Tatcha The Deep Cleanse",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2468916-main-zoom.jpg",
+        "description": "A daily gel cleanser with natural fruit exfoliants that deeply purifies pores and leaves skin feeling refreshed.",
+        "brand": "Tatcha",
+        "price": 40,
+        "ingredients": ["Water", "Glycerin", "Sodium Cocoyl Glutamate", "Luffa Cylindrica Fruit Extract"]
+      },
+      {
+        "id": 15,
+        "name": "Sunday Riley Ceramic Slip Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2148476-main-zoom.jpg?imwidth=315",
+        "description": "A balancing cleanser that draws out impurities and minimizes the appearance of pores while calming the skin.",
+        "brand": "Sunday Riley",
+        "price": 35,
+        "ingredients": ["Water", "Coco Glucoside", "Propanediol", "French Green Clay"]
+      },
+      {
+        "id": 16,
+        "name": "Dermalogica Special Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://dermalogica-mm.com/cdn/shop/products/dermalogica-special-cleansing-gel-250ml_png_1200x1200.png?v=1550568609",
+        "description": "A soap-free, foaming gel cleanser that thoroughly removes impurities without disturbing the skin's natural moisture balance.",
+        "brand": "Dermalogica",
+        "price": 44,
+        "ingredients": ["Water", "Sodium Lauroyl Sarcosinate", "Quillaja Saponaria Bark Extract", "Lavender Oil"]
+      },
+      {
+        "id": 17,
+        "name": "Paula's Choice RESIST Optimal Results Hydrating Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/en_US/dw4d4745e4/images/products/resist-optimal-results-hydrating-cleanser-7600-L.png?sw=2000&sfrm=png",
+        "description": "A creamy cleanser that replenishes moisture and gently removes makeup and impurities, leaving skin soft and hydrated.",
+        "brand": "Paula's Choice",
+        "price": 26,
+        "ingredients": ["Water", "Glycerin", "Caprylic/Capric Triglyceride", "Sodium Cocoyl Glutamate"]
+      },
+      {
+        "id": 18,
+        "name": "Kate Somerville ExfoliKate Cleanser Daily Foaming Wash",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s1778349-main-zoom.jpg",
+        "description": "A daily foaming cleanser that gently exfoliates with AHAs and enzymes while cleansing and brightening the skin.",
+        "brand": "Kate Somerville",
+        "price": 44,
+        "ingredients": ["Water", "Sodium Cocoyl Glycinate", "Papaya Enzyme", "Lactic Acid"]
+      },
+      {
+        "id": 19,
+        "name": "Kiehl's Calendula Deep Cleansing Foaming Face Wash",
+        "category": "cleanser",
+        "imageUrl": "https://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dwec16edef/nextgen/skin-care/face-cleansers/calendula/calendula-deep-cleansing-foaming-face-wash/kiehls-face-cleanser-calendula-deep-cleansing-foaming-face-wash-500ml-000-3605970879730-front.jpg?sw=320&sh=320&sm=cut&sfrm=png&q=70",
+        "description": "A deep-cleansing foaming face wash that effectively removes impurities and dirt while soothing and hydrating the skin with calendula extract.",
+        "brand": "Kiehl's",
+        "price": 38,
+        "ingredients": ["Water", "Sodium Cocoyl Glycinate", "Calendula Flower Extract", "Glycerin"]
+      },
+      {
+        "id": 20,
+        "name": "REN Clean Skincare Evercalm Gentle Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/51st0r00K9L._AC_UF1000,1000_QL80_.jpg",
+        "description": "A gentle cleansing gel that calms and soothes sensitive skin while effectively removing impurities and makeup.",
+        "brand": "REN Clean Skincare",
+        "price": 37,
+        "ingredients": ["Water", "Glycerin", "Coco-Glucoside", "Aloe Barbadensis Leaf Juice"]
+      },
+      {
+        "id": 21,
+        "name": "Ole Henriksen Find Your Balance Oil Control Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/51lF4B7v7tL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A balancing cleanser that deeply cleanses and purifies oily and combination skin without stripping its natural moisture.",
+        "brand": "Ole Henriksen",
+        "price": 33.00,
+        "ingredients": ["Water", "Sodium C14-16 Olefin Sulfonate", "Glycerin", "Eucalyptus Oil"]
+      },
+      {
+        "id": 22,
+        "name": "Mario Badescu Enzyme Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://www.mariobadescu.com/cdn/shop/files/hztmasw3pv9vwmgcbz4x_2b7d220e-14fc-4c0b-b379-b09007dce6fa.jpg?v=1702450632",
+        "description": "An exfoliating gel cleanser with fruit enzymes that gently removes makeup and impurities while revitalizing the skin.",
+        "brand": "Mario Badescu",
+        "price": 16,
+        "ingredients": ["Water", "Glycerin", "Papaya Fruit Extract", "Grapefruit Extract"]
+      },
+      {
+        "id": 23,
+        "name": "Glamglow Supercleanse Clearing Cream-to-Foam Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/71wNFBM2paL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A cream-to-foam cleanser that detoxifies pores and removes makeup, impurities, and excess oil without stripping the skin.",
+        "brand": "Glamglow",
+        "price": 59.99,
+        "ingredients": ["Water", "Glycerin", "Kaolin", "Bamboo Charcoal Powder"]
+      },
+      {
+        "id": 24,
+        "name": "Origins Checks and Balances Frothy Face Wash",
+        "category": "cleanser",
+        "imageUrl": "https://www.origins.com/media/export/cms/products/1000x1000/origins_sku_048E01_1000x1000_0.jpg",
+        "description": "A frothy face wash that balances combination skin by removing impurities without disturbing the skin's natural moisture.",
+        "brand": "Origins",
+        "price": 27.00,
+        "ingredients": ["Water", "Lavender Oil", "Spearmint Leaf Oil", "Bergamot Fruit Oil"]
+      },
+      {
+        "id": 25,
+        "name": "Skinceuticals Simply Clean Gel Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://sfskincare.com/cdn/shop/products/simply-clean.jpg?v=1677156407",
+        "description": "A gel cleanser that decongests pores, removes excess oil, and purifies the skin with a blend of botanical extracts.",
+        "brand": "Skinceuticals",
+        "price": 39.00,
+        "ingredients": ["Water", "Cocamidopropyl Betaine", "Sodium Cocoyl Glycinate", "Chamomilla Recutita Flower Extract"]
+      },
+      {
+        "id": 26,
+        "name": "Philosophy Purity Made Simple Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://cdn11.bigcommerce.com/s-pxmpwj/images/stencil/1280x1280/products/29653/18960439/403c492f-bcd3-44af-b751-b6ae645afe53__77963.1676126859.jpg?c=2",
+        "description": "A gentle cleanser that effectively removes makeup and impurities while toning and hydrating the skin.",
+        "brand": "Philosophy",
+        "price": 34.00,
+        "ingredients": ["Water", "Sodium Lauroamphoacetate", "Glycerin", "Meadowfoam Seed Oil"]
+      },
+      {
+        "id": 27,
+        "name": "Boscia Clear Complexion Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/41M9gAxoxFL.jpg",
+        "description": "A sulfate-free cleanser that controls oil production, balances the complexion, and removes impurities without drying out the skin.",
+        "brand": "Boscia",
+        "price": 24.99,
+        "ingredients": ["Water", "Glycerin", "Willow Bark Extract", "Rosemary Leaf Extract"]
+      },
+      {
+        "id": 28,
+        "name": "IT Cosmetics Confidence in a Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.itcosmetics.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-itcosmetics-master-catalog/default/dwe7c29a6a/product-images/000_CorePage_Updates/CIACleanser/ITC-Cleanser-confidence-in-a-cleanser-2021-full-size-closed-000-Front.jpeg",
+        "description": "A nourishing cleanser that gently melts away makeup and impurities while hydrating and restoring the skin's natural barrier.",
+        "brand": "IT Cosmetics",
+        "price": 35.00,
+        "ingredients": ["Water", "Disodium Cocoamphodiacetate", "Glycerin", "Citric Acid"]
+      },
+      {
+        "id": 29,
+        "name": "Aveeno Ultra-Calming Hydrating Gel Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/71pBqextQjL.jpg",
+        "description": "A gentle gel cleanser that calms and soothes sensitive skin while removing impurities without over-drying.",
+        "brand": "Aveeno",
+        "price": 19.99,
+        "ingredients": ["Water", "Glycerin", "Cocamidopropyl Betaine", "Butylene Glycol"]
+      },
+      {
+        "id": 30,
+        "name": "Farmacy Clean Bee Ultra Gentle Facial Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.farmacybeauty.com/cdn/shop/files/s2046597-av-01.jpg?v=1715102074&width=2000",
+        "description": "A gentle foaming cleanser with honey and hyaluronic acid that removes impurities and makeup while nourishing the skin.",
+        "brand": "Farmacy",
+        "price": 29.00,
+        "ingredients": ["Water", "Glycerin", "Cocamidopropyl Betaine", "Honey Extract", "Fragrance"]
+      },
+      {
+        "id": 31,
+        "name": "Glow Recipe Blueberry Bounce Gentle Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2131803-main-zoom.jpg?imwidth=315",
+        "description": "A hydrating and gentle cleanser infused with blueberry extract to cleanse, hydrate, and brighten the skin.",
+        "brand": "Glow Recipe",
+        "price": 34.00,
+        "ingredients": ["Water", "Sodium Cocoyl Glutamate", "Blueberry Extract", "Hyaluronic Acid", "Fragrance"]
+      },
+      {
+        "id": 32,
+        "name": "Volition Beauty Oceanene Youth-Boost Gel Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://image.influenster.com/eyJidWNrZXQiOiAiaW5mbHVlbnN0ZXJfcHJvZHVjdGlvbiIsICJrZXkiOiAibWVkaWEvcHJvZHVjdC9pbWFnZS9wcm9kdWN0L2ltYWdlL3MxOTc2NDg5LW1haW4tTGhlcm9fUXU1Vmp3ay5qcGciLCAiZWRpdHMiOiB7InJvdGF0ZSI6IG51bGwsICJyZXNpemUiOiB7IndpZHRoIjogNzUwLCAiaGVpZ2h0IjogNzUwLCAiZml0IjogImluc2lkZSIsICJiYWNrZ3JvdW5kIjogeyJyIjogMSwgImciOiAxLCAiYiI6IDEsICJhbHBoYSI6IDB9LCAid2l0aG91dEVubGFyZ2VtZW50IjogdHJ1ZX19LCAiZXh0ZW5kIjoge319",
+        "description": "A refreshing gel cleanser that gently removes impurities while promoting a youthful appearance with marine extracts.",
+        "brand": "Volition Beauty",
+        "price": 28.00,
+        "ingredients": ["Water", "Cocamidopropyl Betaine", "Algae Extract", "Sea Water"]
+      },
+      {
+        "id": 33,
+        "name": "HoliFrog Superior Omega Nutritive Gel Wash",
+        "category": "cleanser",
+        "imageUrl": "https://dy6g3i6a1660s.cloudfront.net/lx3dt9Rp5BgfayZJPC2khAR-BH4/p_550x550.jpg",
+        "description": "A nutrient-rich gel cleanser with omegas and antioxidants that gently cleanses while nourishing and protecting the skin barrier.",
+        "brand": "HoliFrog",
+        "price": 36.00,
+        "ingredients": ["Water", "Cocamidopropyl Hydroxysultaine", "Niacinamide", "Chia Seed Oil"]
+      },
+      {
+        "id": 34,
+        "name": "Youth to the People Kale + Green Tea Spinach Vitamins Superfood Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://i5.walmartimages.com/seo/Youth-To-The-People-Kale-Green-Tea-Spinach-Vitamins-Superfood-Cleanser-Gel-8-oz_73b907ec-cedf-4aac-8fdc-7654f96101a1.11ab3be32bd3565f102c40124844ecc1.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+        "description": "An antioxidant-rich gel cleanser that removes daily buildup and impurities while supporting a healthy skin barrier.",
+        "brand": "Youth to the People",
+        "price": 49.90,
+        "ingredients": ["Water", "Sodium Cocoyl Glutamate", "Kale Leaf Extract", "Green Tea Extract"]
+      },
+      {
+        "id": 35,
+        "name": "Drunk Elephant Slaai Makeup-Melting Butter Cleanser",
+        "category": "balm",
+        "imageUrl": "https://www.musingsofamuse.com/wp-content/uploads/2019/05/Drunk-Elephant-Slaai-Makeup-Melting-Butter-Cleanser-1.jpg",
+        "description": "A cleansing balm that melts away makeup and impurities with a blend of fruit extracts and oils, leaving skin clean and soft.",
+        "brand": "Drunk Elephant",
+        "price": 38.00,
+        "ingredients": ["Ethylhexyl Palmitate", "Caprylic/Capric Triglyceride", "Safflower Seed Oil", "Fruit Extract Blend"]
+      },
+      {
+        "id": 36,
+        "name": "Kate Somerville Goat Milk Moisturizing Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2172658-main-zoom.jpg",
+        "description": "A creamy cleanser enriched with goat milk and manuka honey to cleanse, soothe, and hydrate dry or sensitive skin.",
+        "brand": "Kate Somerville",
+        "price": 44.00,
+        "ingredients": ["Water", "Goat Milk", "Honey Extract", "Jojoba Seed Oil"]
+      },
+      {
+        "id": 37,
+        "name": "Dr. Jart+ Dermaclear Micro Foam Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://sensooskin.com/cdn/shop/products/1618815066457_6e5c138dbe814efba02f10b87476c96d.jpg?v=1666544565",
+        "description": "A micro-foam cleanser that deeply cleanses pores and removes makeup and impurities without irritation, leaving skin refreshed.",
+        "brand": "Dr. Jart+",
+        "price": 22.00,
+        "ingredients": ["Water", "Glycerin", "Sodium Cocoyl Glycinate", "Salicylic Acid"]
+      },
+      {
+        "id": 38,
+        "name": "Summer Fridays Super Amino Gel Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/41PUY7eylIL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A gentle gel cleanser that removes makeup, impurities, and pollution while replenishing amino acids for hydrated, healthy-looking skin.",
+        "brand": "Summer Fridays",
+        "price": 35.00,
+        "ingredients": ["Water", "Sodium Cocoyl Glutamate", "Amino Acid Blend", "Glycerin"]
+      },
+      {
+        "id": 39,
+        "name": "Clinique Take The Day Off Cleansing Balm",
+        "category": "balm",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s886267-main-zoom.jpg?imwidth=315",
+        "description": "A lightweight cleansing balm that quickly dissolves makeup and sunscreen, leaving skin clean and refreshed without any oily residue.",
+        "brand": "Clinique",
+        "price": 53.00,
+        "ingredients": ["Ethylhexyl Palmitate", "Carthamus Tinctorius (Safflower) Seed Oil", "Caprylic/Capric Triglyceride", "Polyethylene"]
+      },
+      {
+        "id": 40,
+        "name": "Shiseido Perfect Cleansing Oil",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s1641778-main-zoom.jpg",
+        "description": "An oil cleanser that effectively removes makeup and impurities while maintaining skin's moisture balance with Shiseido's original technology.",
+        "brand": "Shiseido",
+        "price": 35.00,
+        "ingredients": ["Mineral Oil", "Cetyl Ethylhexanoate", "PEG-12 Laurate", "Glyceryl Behenate"]
+      },
+      {
+        "id": 41,
+        "name": "Biossance Squalane + Antioxidant Cleansing Oil",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2051902-main-zoom.jpg?imwidth=315",
+        "description": "An antioxidant-rich cleansing oil that gently removes makeup and impurities while locking in moisture with squalane.",
+        "brand": "Biossance",
+        "price": 32.00,
+        "ingredients": ["Squalane", "Caprylic/Capric Triglyceride", "Vitamin E", "Lavender Oil"]
+      },
+      {
+        "id": 42,
+        "name": "Laneige Multi Deep-Clean Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/51FmGNCbYGL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A deep-cleansing foam that removes impurities and excess oil while maintaining skin's moisture balance with moringa seed extract.",
+        "brand": "Laneige",
+        "price": 25.00,
+        "ingredients": ["Water", "Stearic Acid", "Potassium Hydroxide", "Moringa Oleifera Seed Extract"]
+      },
+      {
+        "id": 43,
+        "name": "Glow Recipe Papaya Sorbet Enzyme Cleansing Balm",
+        "category": "balm",
+        "imageUrl": "https://m.media-amazon.com/images/I/61dECxG6yJL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A lightweight cleansing balm that gently melts away makeup and impurities with papaya enzymes, leaving skin soft and hydrated.",
+        "brand": "Glow Recipe",
+        "price": 32.00,
+        "ingredients": ["Ethylhexyl Palmitate", "Papaya Enzyme", "Blueberry Extract", "Apricot Kernel Oil", "Fragrance"]
+      },
+      {
+        "id": 44,
+        "name": "Peter Thomas Roth Anti-Aging Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/71ofn2RlTQL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A luxurious gel cleanser that helps improve the appearance of fine lines and wrinkles while removing makeup and impurities.",
+        "brand": "Peter Thomas Roth",
+        "price": 39.00,
+        "ingredients": ["Water", "Sodium Laureth Sulfate", "Cocamidopropyl Betaine", "Peach Extract"]
+      },
+      {
+        "id": 45,
+        "name": "Tatcha The Rice Wash Skin-Softening Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://media.kohlsimg.com/is/image/kohls/5108877?wid=400&hei=400&op_sharpen=1",
+        "description": "A creamy cleanser that gently exfoliates with rice powder while hydrating and softening skin with hyaluronic acid and Japanese algae.",
+        "brand": "Tatcha",
+        "price": 40.00,
+        "ingredients": ["Water", "Glycerin", "Rice Powder", "Japanese Algae"]
+      },
+      {
+        "id": 46,
+        "name": "Glossier Solution Exfoliating Skin Perfector",
+        "category": "cleanser",
+        "imageUrl": "https://glossier-prod.imgix.net/files/glossier-skincare-solution-carousel-01.png?auto=compress,format&cs=srgb&w=1374",
+        "description": "An exfoliating liquid that improves skin texture and clarity with a blend of AHAs, BHAs, and PHAs, revealing smoother, clearer skin.",
+        "brand": "Glossier",
+        "price": 30,
+        "ingredients": ["Water", "Glycolic Acid", "Salicylic Acid", "Lactic Acid"]
+      },
+      {
+        "id": 47,
+        "name": "Paula's Choice Skin Balancing Oil-Reducing Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/61ecA+UtzNL.jpg",
+        "description": "A gentle foaming cleanser that removes makeup and excess oil while balancing skin's moisture levels with ceramides and antioxidants.",
+        "brand": "Paula's Choice",
+        "price": 22.00,
+        "ingredients": ["Water", "Sodium Cocoyl Isethionate", "Glycerin", "Ceramide NP"]
+      },
+      {
+        "id": 48,
+        "name": "REN Clean Skincare Perfect Canvas Clean Jelly Oil Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.niche-beauty.com/images/generated/det/37/64/ren-clean-skincare-perfect-canvas-clean-jelly-oil-cleanser.jpg",
+        "description": "A jelly-to-oil cleanser that removes makeup and pollution while nourishing skin with omega-rich oils and antioxidants.",
+        "brand": "REN Clean Skincare",
+        "price": 37.00,
+        "ingredients": ["Sunflower Seed Oil", "Glycerin", "Grape Seed Oil", "Vitamin E"]
+      },
+      {
+        "id": 49,
+        "name": "Saturday Skin Rise + Shine Gentle Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsch5C7lSzuUuib8s4s37At7gnO6GfOpf8wg&s",
+        "description": "A gentle foam cleanser that removes impurities and makeup while hydrating and soothing skin with apple and kiwi extracts.",
+        "brand": "Saturday Skin",
+        "price": 26.00,
+        "ingredients": ["Water", "Sodium Cocoyl Isethionate", "Apple Fruit Extract", "Kiwi Extract"]
+      },
+      {
+        "id": 50,
+        "name": "Fresh Sugar Strawberry Exfoliating Face Wash",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/61SCZutHJ7L.jpg",
+        "description": "A gentle exfoliating face wash that refines and softens skin texture with real strawberry seeds and sugar crystals.",
+        "brand": "Fresh",
+        "price": 12.00,
+        "ingredients": ["Water", "Sucrose", "Strawberry Fruit Extract", "Glycerin"]
+      },
+      {
+        "id": 51,
+        "name": "Milk Makeup Vegan Milk Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2306330-main-zoom.jpg?imwidth=315",
+        "description": "A gentle cream cleanser with a blend of vegan milks that moisturize, soothe, and cleanse without stripping skin.",
+        "brand": "Milk Makeup",
+        "price": 30.00,
+        "ingredients": ["Water", "Glycerin", "Squalane", "Oat Kernel Extract"]
+      },
+      {
+        "id": 52,
+        "name": "Dr. Dennis Gross Skincare Alpha Beta Pore Perfecting Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/41E2MvW2t-L.jpg",
+        "description": "A pore-refining gel cleanser that removes makeup, excess oil, and impurities while minimizing the appearance of pores.",
+        "brand": "Dr. Dennis Gross Skincare",
+        "price": 39.00,
+        "ingredients": ["Water", "Cocamidopropyl Hydroxysultaine", "Salicylic Acid", "Witch Hazel Extract"]
+      },
+      {
+        "id": 53,
+        "name": "Belif Aqua Bomb Jelly Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/512ouQpudfL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A hydrating jelly-to-foam cleanser that gently removes makeup and impurities while replenishing moisture with lady's mantle.",
+        "brand": "Belif",
+        "price": 30.00,
+        "ingredients": ["Water", "Glycerin", "Potassium Cocoyl Glycinate", "Lady's Mantle Extract"]
+      },
+      {
+        "id": 54,
+        "name": "Caudalie Vinoclean Instant Foaming Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2421097-main-zoom.jpg?imwidth=315",
+        "description": "A soap-free foam cleanser that gently purifies and revitalizes the skin with grape extracts, leaving it soft and refreshed.",
+        "brand": "Caudalie",
+        "price": 30.00,
+        "ingredients": ["Water", "Glycerin", "Sodium Cocoyl Glutamate", "Grape Fruit Water"]
+      },
+      {
+        "id": 55,
+        "name": "Innisfree Green Tea Foam Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://www.dodoskin.com/cdn/shop/files/131174506_79817bc6-3217-40e0-9b2d-47448ea39426.webp?v=1708665198",
+        "description": "A foaming cleanser enriched with organic Jeju green tea extract that gently removes impurities while moisturizing and brightening skin.",
+        "brand": "Innisfree",
+        "price": 12,
+        "ingredients": ["Water", "Glycerin", "Stearic Acid", "Green Tea Extract"]
+      },
+      {
+        "id": 56,
+        "name": "Boscia Detoxifying Black Charcoal Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/41+b5+FS6HL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A warming gel cleanser that deeply cleanses pores, absorbs excess oil, and removes impurities with activated black charcoal.",
+        "brand": "Boscia",
+        "price": 23.00,
+        "ingredients": ["Glycerin", "Charcoal Powder", "Artichoke Leaf Extract", "Vitamin C"]
+      },
+      {
+        "id": 57,
+        "name": "Elemis Pro-Collagen Cleansing Balm",
+        "category": "balm",
+        "imageUrl": "https://static.thcdn.com/images/large/original//productimg/1600/1600/11523630-4395018245078593.jpg",
+        "description": "A luxurious cleansing balm that dissolves makeup, daily grime, and pollutants while nourishing and hydrating the skin with elderberry oil.",
+        "brand": "Elemis",
+        "price": 69.00,
+        "ingredients": ["Caprylic/Capric Triglyceride", "Elderberry Oil", "Starflower Oil", "Padina Pavonica"]
+      },
+      {
+        "id": 58,
+        "name": "Philosophy Microdelivery Exfoliating Facial Wash",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/61IBqXxY0JL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A mild exfoliating facial wash with micro-exfoliating beads that gently cleanse and refine skin texture for a smoother, brighter complexion.",
+        "brand": "Philosophy",
+        "price": 30.00,
+        "ingredients": ["Water", "Sodium C14-16 Olefin Sulfonate", "Glycerin", "Micro-Exfoliating Beads"]
+      },
+      {
+        "id": 59,
+        "name": "REN Clean Skincare Rosa Centifolia Cleansing Gel",
+        "category": "cleanser",
+        "imageUrl": "https://m.media-amazon.com/images/I/51h8m-21d3L._AC_UF1000,1000_QL80_.jpg",
+        "description": "A gentle cleansing gel that purifies and refreshes skin with rose extract, leaving it clean, soft, and balanced.",
+        "brand": "REN Clean Skincare",
+        "price": 34.00,
+        "ingredients": ["Water", "Glycerin", "Cocamidopropyl Betaine", "Rosa Damascena Flower Extract"]
+      },
+      {
+        "id": 60,
+        "name": "Tata Harper Regenerating Cleanser",
+        "category": "cleanser",
+        "imageUrl": "https://tataharperskincare.com/cdn/shop/products/regenerating-cleanser-main.jpg?v=1681229324",
+        "description": "An exfoliating cleanser that removes buildup and dead skin cells with apricot microspheres and BHA while nourishing with botanicals.",
+        "brand": "Tata Harper",
+        "price": 88.00,
+        "ingredients": ["Aloe Vera Leaf Juice", "Olive Oil Esters", "Apricot Seed Powder", "Willow Bark Extract"]
+      },
+      {
+        "id": 61,
+        "name": "Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator",
+        "category": "moisturizer",
+        "imageUrl": "https://m.clinique.com/media/export/cms/products/1200x1500/cl_sku_KPR701_1200x1500_0.png",
+        "description": "A gel-cream moisturizer that provides intense hydration for up to 72 hours, helping to plump and smooth skin.",
+        "brand": "Clinique",
+        "price": 46.00,
+        "ingredients": ["Water", "Dimethicone", "Glycerin", "Aloe Barbadensis Leaf Water"]
+      },
+      {
+        "id": 62,
+        "name": "Charlotte Tilbury Magic Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2486272-main-zoom.jpg?imwidth=315",
+        "description": "An iconic moisturizer enriched with hyaluronic acid, vitamins C and E, and a blend of oils to hydrate and transform the skin.",
+        "brand": "Charlotte Tilbury",
+        "price": 100.00,
+        "ingredients": ["Water", "Cyclopentasiloxane", "Hyaluronic Acid", "Rosehip Oil"]
+      },
+      {
+        "id": 63,
+        "name": "Drunk Elephant Lala Retro Whipped Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.niche-beauty.com/images/generated/det/92/59/drunk-elephant-lala-retro-whipped-cream.jpg",
+        "description": "A rich and whipped moisturizer with six African oils and plant ceramide complex to provide intense hydration and nourishment.",
+        "brand": "Drunk Elephant",
+        "price": 364.00,
+        "ingredients": ["Water", "Caprylic/Capric Triglyceride", "Glycerin", "Sodium Hyaluronate"]
+      },
+      {
+        "id": 64,
+        "name": "Kiehl's Ultra Facial Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2663763-main-zoom.jpg?imwidth=315",
+        "description": "A lightweight yet intensely hydrating moisturizer that helps retain moisture and strengthen the skin barrier for healthier-looking skin.",
+        "brand": "Kiehl's",
+        "price": 39.00,
+        "ingredients": ["Water", "Glycerin", "Squalane", "Glacial Glycoprotein"]
+      },
+      {
+        "id": 65,
+        "name": "La Mer Crème de la Mer",
+        "category": "moisturizer",
+        "imageUrl": "https://images.bloomingdalesassets.com/is/image/BLM/products/3/optimized/11370913_fpx.tif?op_sharpen=1&wid=700&fit=fit,1&$filtersm$",
+        "description": "A luxurious moisturizer that deeply hydrates and renews the skin with the nutrient-rich Miracle Broth™, leaving it softer and smoother.",
+        "brand": "La Mer",
+        "price": 390.00,
+        "ingredients": ["Algae Extract", "Mineral Oil", "Petrolatum", "Glycerin"]
+      },
+      {
+        "id": 66,
+        "name": "Tatcha The Water Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/51BCmVm76XL._AC_UF1000,1000_QL80_.jpg",
+        "description": "An oil-free, anti-aging water cream that releases a burst of skin-improving Japanese nutrients, powerful botanicals, and optimal hydration for poreless-looking skin.",
+        "brand": "Tatcha",
+        "price": 72.00,
+        "ingredients": ["Water", "Saccharomyces/Camellia Sinensis Leaf/Cladosiphon Okamuranus/Rice Ferment Filtrate", "Glycerin", "Propanediol"]
+      },
+      {
+        "id": 67,
+        "name": "Sunday Riley Tidal Brightening Enzyme Water Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/12338753_fpx.tif?op_sharpen=1&wid=700&hei=855&fit=fit,1",
+        "description": "A lightweight, oil-free gel-cream moisturizer that visibly brightens and hydrates skin with two forms of hyaluronic acid and tamarind extract.",
+        "brand": "Sunday Riley",
+        "price": 52.00,
+        "ingredients": ["Water", "Hydrolyzed Hyaluronic Acid", "Tamarindus Indica Seed Gum", "Papaya Extract"]
+      },
+      {
+        "id": 68,
+        "name": "Glow Recipe Watermelon Glow Pink Juice Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2742203-main-zoom.jpg?imwidth=315",
+        "description": "A lightweight moisturizer that hydrates and smooths skin with a blend of watermelon extract, hyaluronic acid, and botanicals for a radiant complexion.",
+        "brand": "Glow Recipe",
+        "price": 40.00,
+        "ingredients": ["Water", "Glycerin", "Watermelon Fruit Extract", "Hyaluronic Acid", "Fragrance"]
+      },
+      {
+        "id": 69,
+        "name": "Youth to the People Superfood Air-Whip Moisture Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbd3F0FaQ0gIjSvGtFhqlv-qnA8zsJMOOJuQ&s",
+        "description": "An air-whipped moisturizer packed with superfoods like kale, spinach, and green tea to hydrate, balance, and nourish the skin.",
+        "brand": "Youth to the People",
+        "price": 48.00,
+        "ingredients": ["Water", "Helianthus Annuus Seed Oil", "Glycerin", "Kale Leaf Extract"]
+      },
+      {
+        "id": 70,
+        "name": "First Aid Beauty Ultra Repair Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61cQmKA-SQL.jpg",
+        "description": "A rich, whipped emollient moisturizer that hydrates dry, parched skin and provides long-lasting relief with colloidal oatmeal and shea butter.",
+        "brand": "First Aid Beauty",
+        "price": 38.00,
+        "ingredients": ["Colloidal Oatmeal", "Shea Butter", "Allantoin", "Ceramide 3"]
+      },
+      {
+        "id": 71,
+        "name": "CeraVe Moisturizing Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_ef902ef2-7e84-4c3e-8857-6b45c768af63?wid=488&hei=488&fmt=pjpeg",
+        "description": "A rich, non-greasy moisturizing cream with ceramides and hyaluronic acid to help restore the skin's natural barrier and retain hydration.",
+        "brand": "CeraVe",
+        "price": 13.99,
+        "ingredients": ["Purified Water", "Glycerin", "Ceteareth-20 and Cetearyl Alcohol", "Caprylic/Capric Triglyceride"]
+      },
+      {
+        "id": 72,
+        "name": "Belif The True Cream Aqua Bomb",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61f7G1WkWYL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A lightweight gel-cream that provides a burst of hydration with a blend of apothecary herbs like lady's mantle and ceramide 3.",
+        "brand": "Belif",
+        "price": 24.00,
+        "ingredients": ["Water", "Cyclohexasiloxane", "Glycerin", "Meadowfoam Seed Oil"]
+      },
+      {
+        "id": 73,
+        "name": "Murad Nutrient-Charged Water Gel",
+        "category": "moisturizer",
+        "imageUrl": "https://www.murad.com/cdn/shop/products/Retail_HYD2_Nutrient-Charged_Water_Gel_1.7oz_Primary_GBL__03836.1635835792.1280.1280_grande.png?v=1706833951",
+        "description": "An oil-free gel moisturizer that locks in moisture for up to 5 days with vitamins and peptides to restore a healthy-looking glow.",
+        "brand": "Murad",
+        "price": 50.00,
+        "ingredients": ["Water", "Dimethicone", "Glycerin", "Urea"]
+      },
+      {
+        "id": 74,
+        "name": "Peter Thomas Roth Water Drench Hyaluronic Cloud Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s1898550-main-zoom.jpg?imwidth=315",
+        "description": "A concentrated 30% hyaluronic acid cream that transforms atmospheric vapor into fresh, pure water, providing hydration for up to 72 hours.",
+        "brand": "Peter Thomas Roth",
+        "price": 54.00,
+        "ingredients": ["Water", "Dimethicone", "Hyaluronic Acid", "Ceramides"]
+      },
+      {
+        "id": 75,
+        "name": "Laneige Water Bank Moisture Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2735843-main-zoom.jpg?imwidth=315",
+        "description": "A moisture-recharging gel cream that creates a moisture barrier to prevent skin from moisture loss with green mineral water.",
+        "brand": "Laneige",
+        "price": 40.00,
+        "ingredients": ["Water", "Propanediol", "Glycerin", "Squalane"]
+      },
+      {
+        "id": 76,
+        "name": "Origins GinZing Energy-Boosting Gel Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61psulX10zL.jpg",
+        "description": "An oil-free, energizing gel moisturizer that hydrates and revs up radiance with coffee beans and ginseng for refreshed, vibrant skin.",
+        "brand": "Origins",
+        "price": 11.90,
+        "ingredients": ["Water", "Glycerin", "Caffeine", "Panax Ginseng Root Extract"]
+      },
+      {
+        "id": 77,
+        "name": "Ole Henriksen C-Rush Brightening Gel Crème",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2071751-main-zoom.jpg?imwidth=315",
+        "description": "A brightening gel crème with 3 sources of vitamin C, AHAs, and rose of winter extract for a smooth, hydrated, and radiant complexion.",
+        "brand": "Ole Henriksen",
+        "price": 52.00,
+        "ingredients": ["Water", "Sodium Ascorbyl Phosphate", "Glycerin", "Shea Butter"]
+      },
+      {
+        "id": 78,
+        "name": "Glossier Priming Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://glossier-prod.imgix.net/files/glossier-skincare-priming-moisturizer-carousel-1.png?auto=compress,format&cs=srgb&w=1374",
+        "description": "A buildable hydrating cream that helps create a dewy, glowy canvas while prepping skin for makeup with antioxidant-rich vitamins.",
+        "brand": "Glossier",
+        "price": 35.00,
+        "ingredients": ["Water", "Triglyceride", "Dimethicone", "Glycerin"]
+      },
+      {
+        "id": 79,
+        "name": "Fresh Lotus Youth Preserve Face Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.fresh.com/dw/image/v2/BDJQ_PRD/on/demandware.static/-/Sites-fresh_master_catalog/default/dwd77f52d0/product_images/H00007015_ingredient.png?sw=800&sh=800&bgcolor=F7F7F8&sfrm=png",
+        "description": "A lightweight daily moisturizer that minimizes signs of aging with Super 7 Complex and star fruit extract for a youthful-looking complexion.",
+        "brand": "Fresh",
+        "price": 42.00,
+        "ingredients": ["Water", "Glycerin", "Meadowfoam Seed Oil", "Lotus Flower Extract"]
+      },
+      {
+        "id": 80,
+        "name": "IT Cosmetics Confidence in a Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/71O2Qr2diGL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A super moisturizing cream that transforms your skin with ceramides, peptides, collagen, hyaluronic acid, and colloidal oatmeal.",
+        "brand": "IT Cosmetics",
+        "price": 59.00,
+        "ingredients": ["Water", "Caprylic/Capric Triglyceride", "Glycerin", "Ceramide 3"]
+      },
+      {
+        "id": 81,
+        "name": "Shiseido Essential Energy Moisturizing Gel Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/BBSK_S03/on/demandware.static/-/Sites-itemmaster_shiseido/default/dwe0f15b50/images/hi-res/0730852143227_Main.jpg?sw=800&sh=800&sm=fit",
+        "description": "An energizing gel cream moisturizer that hydrates, smooths, and invigorates the skin with ReNeura Technology+™ and citrus unshiu peel extract.",
+        "brand": "Shiseido",
+        "price": 48.00,
+        "ingredients": ["Water", "Dimethicone", "Glycerin", "Citrus Unshiu Peel Extract"]
+      },
+      {
+        "id": 82,
+        "name": "Bobbi Brown Vitamin Enriched Face Base",
+        "category": "moisturizer",
+        "imageUrl": "https://m.bobbibrowncosmetics.com/media/export/cms/products/v2_1080x1080/bb_sku_E1LM01_1080x1080_0.jpg",
+        "description": "A primer plus moisturizer hybrid that instantly hydrates, softens, and cushions skin with shea butter and vitamins B, C, and E.",
+        "brand": "Bobbi Brown",
+        "price": 69.00,
+        "ingredients": ["Water", "Shea Butter", "Glycerin", "Vitamin C"]
+      },
+      {
+        "id": 83,
+        "name": "Kate Somerville Goat Milk Moisturizing Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.katesomerville.com/cdn/shop/files/10250_fr.jpg?v=1710275074",
+        "description": "A soothing moisturizing cream that hydrates and restores skin with goat milk, jojoba, and avocado for a healthy, radiant complexion.",
+        "brand": "Kate Somerville",
+        "price": 76.00,
+        "ingredients": ["Water", "Goat Milk", "Jojoba Seed Oil", "Avocado Oil"]
+      },
+      {
+        "id": 84,
+        "name": "REN Clean Skincare Evercalm Global Protection Day Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://static.thcdn.com/images/large/original//productimg/1600/1600/10872940-1484894571118507.jpg",
+        "description": "A calming and hydrating day cream that combats visible signs of premature aging and protects against environmental aggressors.",
+        "brand": "REN Clean Skincare",
+        "price": 52.00,
+        "ingredients": ["Water", "Cetearyl Alcohol", "Glycerin", "Blackcurrant Seed Oil"]
+      },
+      {
+        "id": 85,
+        "name": "Paula's Choice Omega+ Complex Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2534196-main-zoom.jpg?imwidth=315",
+        "description": "A nourishing moisturizer that replenishes dull, dehydrated skin with omega fatty acids and antioxidants for smoother, healthier-looking skin.",
+        "brand": "Paula's Choice",
+        "price": 39.00,
+        "ingredients": ["Water", "Squalane", "Glycerin", "Omega Fatty Acids"]
+      },
+      {
+        "id": 86,
+        "name": "Mario Badescu Buttermilk Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2184976-main-zoom.jpg",
+        "description": "A lightweight, lactic acid-infused moisturizer that hydrates and exfoliates to reveal smoother, healthier-looking skin.",
+        "brand": "Mario Badescu",
+        "price": 20.00,
+        "ingredients": ["Water", "Glyceryl Stearate", "Lactic Acid", "Buttermilk"]
+      },
+      {
+        "id": 87,
+        "name": "The Ordinary Natural Moisturizing Factors + HA",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/51pe5YkHW1L.jpg",
+        "description": "A surface hydration formula with amino acids, dermal lipids, and hyaluronic acid to offer non-greasy hydration for dry skin.",
+        "brand": "The Ordinary",
+        "price": 9.95,
+        "ingredients": ["Water", "Caprylic/Capric Triglyceride", "Glycerin", "Hyaluronic Acid"]
+      },
+      {
+        "id": 88,
+        "name": "Biossance Squalane + Omega Repair Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://image.harrods.com/biossance-squalane-omega-repair-cream-50ml_16905278_33534530_2048.jpg",
+        "description": "A rich cream that deeply moisturizes and nourishes with squalane, omega fatty acids, and ceramides for smoother, more radiant skin.",
+        "brand": "Biossance",
+        "price": 60.00,
+        "ingredients": ["Squalane", "Glycerin", "Shea Butter", "Omega Fatty Acids"]
+      },
+      {
+        "id": 89,
+        "name": "Dr. Jart+ Cicapair Tiger Grass Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.drjart.com/media/export/cms/products/1000x1000/dj_sku_H59X01_1000x1000_0.jpg",
+        "description": "A moisturizing cream that helps soothe sensitive skin and repair weakened skin with centella asiatica and minerals.",
+        "brand": "Dr. Jart+",
+        "price": 54.00,
+        "ingredients": ["Centella Asiatica Extract", "Glycerin", "Shea Butter", "Niacinamide"]
+      },
+      {
+        "id": 90,
+        "name": "Olay Regenerist Micro-Sculpting Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://cdn11.bigcommerce.com/s-gud7r2x2lu/images/stencil/500x659/products/505/7099/1.19_MSC_Whip_MOI__85790.1707843587.jpg?c=2",
+        "description": "An anti-aging moisturizer that hydrates to firm and lift skin's appearance, revealing younger-looking skin with hyaluronic acid and amino-peptides.",
+        "brand": "Olay",
+        "price": 25.00,
+        "ingredients": ["Water", "Niacinamide", "Glycerin", "Hyaluronic Acid"]
+      },
+      {
+        "id": 91,
+        "name": "GlamGlow Waterburst Hydrated Glow Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61DtF60OVXL.jpg",
+        "description": "A weightless water cream moisturizer that instantly hydrates and leaves skin with a radiant glow, infused with triple hyaluronic acid complex.",
+        "brand": "GlamGlow",
+        "price": 52.00,
+        "ingredients": ["Water", "Glycerin", "Hyaluronic Acid", "Ceramide NP"]
+      },
+      {
+        "id": 92,
+        "name": "Fresh Rose Deep Hydration Face Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2458230-main-zoom.jpg?imwidth=315",
+        "description": "A lightweight gel-cream infused with soothing rosewater and nourishing rose flower oil that delivers intense hydration for plump, dewy skin.",
+        "brand": "Fresh",
+        "price": 46.00,
+        "ingredients": ["Water", "Glycerin", "Rose Flower Oil", "Hyaluronic Acid"]
+      },
+      {
+        "id": 93,
+        "name": "Dr. Dennis Gross Skincare Hyaluronic Marine Oil-Free Moisture Cushion",
+        "category": "moisturizer",
+        "imageUrl": "https://8c3412d76225d04d7baa-be98b6ea17920953fb931282eff9a681.images.lovelyskin.com/jkefhvnj_201801112238042384.jpg",
+        "description": "An oil-free gel-cream moisturizer that provides hydration with hyaluronic acid and nourishment with Japanese marine algae for smooth, supple skin.",
+        "brand": "Dr. Dennis Gross Skincare",
+        "price": 60.00,
+        "ingredients": ["Water", "Hyaluronic Acid", "Japanese Marine Algae", "Glycerin"]
+      },
+      {
+        "id": 94,
+        "name": "Biossance Squalane + Probiotic Gel Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://8c3412d76225d04d7baa-be98b6ea17920953fb931282eff9a681.images.lovelyskin.com/jkefhvnj_201801112238042384.jpg",
+        "description": "A lightweight gel moisturizer that hydrates and balances skin with squalane and probiotic technology, leaving a smooth, glowing complexion.",
+        "brand": "Biossance",
+        "price": 65.00,
+        "ingredients": ["Squalane", "Probiotic Blend", "Glycerin", "Lactic Acid"]
+      },
+      {
+        "id": 95,
+        "name": "Kiehl's Calendula Serum-Infused Water Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dw1b4cc831/nextgen/skin-care/face-moisturizers/calendula/calendula-serum-infused-water-cream/kiehls-face-moisturizer-calendula-serum-infused-water-cream-100ml-000-3605971990496-front.jpg?sw=320&sh=320&sm=cut&sfrm=png&q=70",
+        "description": "A refreshing water cream infused with concentrated calendula serum that provides soothing hydration to calm skin.",
+        "brand": "Kiehl's",
+        "price": 58.00,
+        "ingredients": ["Water", "Glycerin", "Calendula Flower Extract", "Squalane"]
+      },
+      {
+        "id": 96,
+        "name": "Peter Thomas Roth Hungarian Thermal Water Mineral-Rich Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://i5.walmartimages.com/seo/Peter-Thomas-Roth-Hungarian-Thermal-Water-Mineral-Rich-Moisturizer-Hydrating-Facial-Moisturizer-Botanicals-Fine-Lines-Wrinkles-Dullness-Uneven-Skin-T_228843c1-e2cb-4d6b-af0d-60a76263e1f2.5a16fbfa065b27f0911204e7290c655c.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+        "description": "A mineral-rich moisturizer that harnesses the power of Hungarian thermal water, botanicals, and modern technologies to nourish and hydrate the skin.",
+        "brand": "Peter Thomas Roth",
+        "price": 54.00,
+        "ingredients": ["Water", "Glycerin", "Hungarian Thermal Water", "Sunflower Seed Oil"]
+      },
+      {
+        "id": 97,
+        "name": "Kate Somerville Oil Free Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.katesomerville.com/cdn/shop/files/10011_fr.jpg?v=1710283405",
+        "description": "An oil-free moisturizer that provides lightweight hydration with anti-aging benefits, perfect for oily or acne-prone skin.",
+        "brand": "Kate Somerville",
+        "price": 76.00,
+        "ingredients": ["Water", "Glycerin", "Retinyl Palmitate", "Sodium Hyaluronate"]
+      },
+      {
+        "id": 98,
+        "name": "Tatcha The Dewy Skin Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/51RFfDtchYL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A rich cream that feeds skin with plumping hydration and antioxidant-packed Japanese purple rice for a dewy, healthy glow.",
+        "brand": "Tatcha",
+        "price": 72.00,
+        "ingredients": ["Water", "Glycerin", "Japanese Purple Rice Extract", "Squalane"]
+      },
+      {
+        "id": 99,
+        "name": "Drunk Elephant Protini Polypeptide Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2025633-main-zoom.jpg?imwidth=315",
+        "description": "A breakthrough protein moisturizer that combines signal peptides, growth factors, and amino acids to visibly improve skin's tone, texture, and firmness.",
+        "brand": "Drunk Elephant",
+        "price": 69.00,
+        "ingredients": ["Water", "Dicaprylyl Carbonate", "Glycerin", "Acetyl Glucosamine"]
+      },
+      {
+        "id": 100,
+        "name": "Youth to the People Adaptogen Deep Moisture Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2088029-main-zoom.jpg?imwidth=315",
+        "description": "A deeply hydrating cream that balances and soothes skin with adaptogenic herbs and mushrooms for calm, resilient skin.",
+        "brand": "Youth to the People",
+        "price": 58.00,
+        "ingredients": ["Water", "Helianthus Annuus Seed Oil", "Glycerin", "Rhodiola Rosea Root Extract"]
+      },
+      {
+        "id": 101,
+        "name": "Sunday Riley ICE Ceramide Moisturizing Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2266260-main-zoom.jpg?imwidth=315",
+        "description": "A luxurious ceramide-enriched cream that deeply hydrates and strengthens the skin barrier, leaving skin smooth, plump, and radiant.",
+        "brand": "Sunday Riley",
+        "price": 65.00,
+        "ingredients": ["Water", "Ceramides", "Squalane", "Glycerin"]
+      },
+      {
+        "id": 102,
+        "name": "Ole Henriksen Sheer Transformation Perfecting Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.pricerunner.dk/product/640x640/1897802061/Ole-Henriksen-Sheer-Transformation-Perfecting-Moisturizer-50ml.jpg?ph=true",
+        "description": "A lightweight, oil-free moisturizer with multi-fruit acids, antioxidants, and botanicals to refine texture and even tone for radiant, smooth skin.",
+        "brand": "Ole Henriksen",
+        "price": 58.00,
+        "ingredients": ["Water", "Dimethicone", "Glycerin", "Fruit Acid Blend"]
+      },
+      {
+        "id": 103,
+        "name": "Honey Halo Ultra-Hydrating Ceramide Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://www.farmacybeauty.com/cdn/shop/products/s2369957-av-01.jpg?v=1676577203&width=2000",
+        "description": "An ultra-hydrating ceramide moisturizer clinically proven to visibly plump, improve the look of fine lines and replenish dry, distressed skin.",
+        "brand": "Farmacy",
+        "price": 48.00,
+        "ingredients": ["Water/Aqua/Eau", "Glycerin", "Caprylic/Capric Triglyceride", "Squalane", "Cetearyl Alcohol", "Polyglyceryl-6 Distearate", "Honey Extract", "Fragrance"]
+      },
+      {
+        "id": 104,
+        "name": "Skinfix Barrier+ Triple Lipid-Peptide Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://skinfix.com/cdn/shop/files/skinfix-barrier-triple-lipid-peptide-cream.jpg?v=1715463217",
+        "description": "A deeply hydrating cream that strengthens the skin barrier and replenishes moisture with a blend of lipids, peptides, and soothing ingredients.",
+        "brand": "Skinfix",
+        "price": 54.00,
+        "ingredients": ["Shea Butter", "Squalane", "Ceramide NP", "Peptides (Palmitoyl Tripeptide-1, Palmitoyl Tetrapeptide-7, Tetrapeptide-21)", "Glycerin", "Sodium Hyaluronate", "Panthenol", "Aloe Barbadensis Leaf Juice", "Allantoin"]
+      },
+      {
+        "id": 105,
+        "name": "IT Cosmetics Confidence in a Gel Lotion",
+        "category": "moisturizer",
+        "imageUrl": "https://www.itcosmetics.com/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-itcosmetics-master-catalog/default/dwfccaada4/product-images/121118/ConfidenceinaGelLotionMoisturizer.jpg",
+        "description": "A lightweight gel lotion that delivers 72 hours of hydration with ceramides, glycerin, and cactus flower extract for smooth, radiant skin.",
+        "brand": "IT Cosmetics",
+        "price": 37.00,
+        "ingredients": ["Water", "Glycerin", "Ceramide NP", "Cactus Flower Extract"]
+      },
+      {
+        "id": 106,
+        "name": "Shiseido Waso Clear Mega-Hydrating Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.shiseido.com.sg/on/demandware.static/-/Sites-itemmaster_shiseido/default/dw35b074d6/images/products/13958/13958_S_01.jpg",
+        "description": "A hydrating gel moisturizer that plumps and hydrates skin with white jelly mushroom extract, leaving a dewy finish.",
+        "brand": "Shiseido",
+        "price": 40.99,
+        "ingredients": ["Water", "Glycerin", "White Jelly Mushroom Extract", "Dimethicone"]
+      },
+      {
+        "id": 107,
+        "name": "Caudalie Vinosource Moisturizing Sorbet",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/51EoClRPEcL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A lightweight gel-cream moisturizer that provides immediate and long-lasting hydration while soothing and reducing redness with grape water and chamomile.",
+        "brand": "Caudalie",
+        "price": 38.00,
+        "ingredients": ["Water", "Vitis Vinifera Fruit Water", "Glycerin", "Squalane"]
+      },
+      {
+        "id": 108,
+        "name": "Volition Beauty Celery Green Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://media.ulta.com/i/ulta/2599024?w=500&h=500",
+        "description": "A lightweight, oil-free moisturizer enriched with celery extract and hyaluronic acid to hydrate, balance, and calm skin for a fresh, healthy glow.",
+        "brand": "Volition Beauty",
+        "price": 60.00,
+        "ingredients": ["Water", "Celery Extract", "Hyaluronic Acid", "Glycerin"]
+      },
+      {
+        "id": 109,
+        "name": "Herbivore Pink Cloud Rosewater Moisture Crème",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/41E22phvpRL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A lightweight moisturizer infused with rosewater, aloe water, and white tea extract to hydrate, soothe, and reduce the appearance of redness.",
+        "brand": "Herbivore",
+        "price": 46.00,
+        "ingredients": ["Aloe Barbadensis Leaf Water", "Rose Flower Water", "Kukui Nut Oil", "White Tea Leaf Extract"]
+      },
+      {
+        "id": 110,
+        "name": "Glow Recipe Banana Soufflé Moisture Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://cdn-cf.ipsy.com/contentAsset/image/36496145-da27-4d71-bda2-bbf4c83e1501/fileAsset?byInode=1",
+        "description": "A soothing, lightweight moisture cream enriched with banana extract, magnesium, turmeric, and cica to hydrate and calm stressed skin.",
+        "brand": "Glow Recipe",
+        "price": 39.00,
+        "ingredients": ["Water", "Glycerin", "Banana Fruit Extract", "Magnesium", "Fragrance"]
+      },
+      {
+        "id": 111,
+        "name": "Summer Fridays Cloud Dew Oil-Free Gel Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2412856-main-zoom.jpg?imwidth=315",
+        "description": "An oil-free gel-cream moisturizer that delivers lightweight hydration with a dewy finish, perfect for all skin types, even sensitive.",
+        "brand": "Summer Fridays",
+        "price": 45.00,
+        "ingredients": ["Water", "Glycerin", "Squalane", "Niacinamide"]
+      },
+      {
+        "id": 112,
+        "name": "Innisfree Green Tea Seed Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://us.innisfree.com/cdn/shop/files/IF_GT-HC_PDP_01_Packshot_2024_1080x1080_f5e1e998-5fa8-43b5-b1bf-5ab65a082862.jpg?v=1703776861",
+        "description": "A moisturizing cream enriched with Jeju green tea seed oil and green tea extract for deep hydration and nourishment.",
+        "brand": "Innisfree",
+        "price": 29.00,
+        "ingredients": ["Camellia Sinensis Leaf Extract", "Glycerin", "Propanediol", "Green Tea Seed Oil"]
+      },
+      {
+        "id": 113,
+        "name": "Belif The True Cream Aqua Bomb Aloe Vera",
+        "category": "moisturizer",
+        "imageUrl": "https://media.allure.com/photos/5ed15d940b710a0008c0dbfc/master/pass/belif-aqua-bomb-aloe-vera.jpg",
+        "description": "An ultra-lightweight, cooling gel cream that instantly bursts with moisture and hydrates with aloe vera and lady's mantle.",
+        "brand": "Belif",
+        "price": 38.00,
+        "ingredients": ["Water", "Glycerin", "Aloe Barbadensis Leaf Juice", "Meadowfoam Seed Oil"]
+      },
+      {
+        "id": 114,
+        "name": "Farmacy Daily Greens Oil-Free Gel Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61T1Cd2qwgL.jpg",
+        "description": "An oil-free gel moisturizer with moringa and papaya extracts to hydrate, balance, and visibly reduce pores for healthy-looking skin.",
+        "brand": "Farmacy",
+        "price": 44.00,
+        "ingredients": ["Water", "Glycerin", "Moringa Oleifera Seed Extract", "Papaya Fruit Extract"]
+      },
+      {
+        "id": 115,
+        "name": "Josie Maran Whipped Argan Oil Face Butter",
+        "category": "moisturizer",
+        "imageUrl": "https://m.media-amazon.com/images/I/61AaJrhDtRL._AC_UF1000,1000_QL80_.jpg",
+        "description": "A whipped face butter with 100% pure argan oil and watermelon seed oil to deeply hydrate and nourish for smoother, more radiant skin.",
+        "brand": "Josie Maran",
+        "price": 45.00,
+        "ingredients": ["Argan Oil", "Watermelon Seed Oil", "Shea Butter", "Glycerin"]
+      },
+      {
+        "id": 116,
+        "name": "REN Clean Skincare Glow Daily Vitamin C Gel Cream",
+        "category": "moisturizer",
+        "imageUrl": "https://slimages.macysassets.com/is/image/MCY/products/9/optimized/22068709_fpx.tif?op_sharpen=1&wid=700&hei=855&fit=fit,1",
+        "description": "A vitamin C-infused gel cream that hydrates, brightens, and protects the skin from environmental stressors for a radiant complexion.",
+        "brand": "REN Clean Skincare",
+        "price": 54.00,
+        "ingredients": ["Water", "Ascorbic Acid", "Glycerin", "Citrus Fruit Extract"]
+      },
+      {
+        "id": 117,
+        "name": "Glossier Priming Moisturizer Rich",
+        "category": "moisturizer",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2649515-main-zoom.jpg?imwidth=315",
+        "description": "A luxurious face cream that deeply moisturizes with shea and murumuru butters, leaving skin softer, smoother, and ready for makeup.",
+        "brand": "Glossier",
+        "price": 35,
+        "ingredients": ["Water", "Shea Butter", "Glycerin", "Murumuru Seed Butter"]
+      },
+      {
+        "id": 118,
+        "name": "Dermalogica Active Moist",
+        "category": "moisturizer",
+        "imageUrl": "https://www.dermalogica.com/cdn/shop/products/Active-Moist_3.4oz.jpg?v=1698088392&width=1946",
+        "description": "An oil-free moisturizer that provides lightweight hydration with silk amino acids and plant extracts to balance combination skin.",
+        "brand": "Dermalogica",
+        "price": 76.00,
+        "ingredients": ["Water", "Caprylic/Capric Triglyceride", "Silk Amino Acids", "Lavender Extract"]
+      },
+      {
+        "id": 119,
+        "name": "INNBEAUTY Project Next Level Daily Moisturizer",
+        "category": "moisturizer",
+        "imageUrl": "https://incidecoder-content.storage.googleapis.com/c3144d7a-9990-41c3-854d-8d044813ca3f/products/innbeauty-project-10-10-daily-moisturizer/innbeauty-project-10-10-daily-moisturizer_front_photo_original.jpeg",
+        "description": "A lightweight daily moisturizer that hydrates, balances, and supports skin health with a blend of effective and clean ingredients.",
+        "brand": "INNBEAUTY Project",
+        "price": 36.00,
+        "ingredients": ["Glycerin", "Squalane", "Shea Butter", "Olive Fruit Oil", "Green Tea Extract (Camellia Sinensis Leaf Extract)", "Panthenol", "Sodium Hyaluronate", "Tocopherol (Vitamin E)", "Allantoin"]
+      },
+      {
+        "id": 120,
+        "name": "Algenist GENIUS Sleeping Collagen",
+        "category": "moisturizer",
+        "imageUrl": "https://www.algenist.com/cdn/shop/products/Algenist_GeniusSC2.jpg?v=1626292487",
+        "description": "A vegan collagen night cream that visibly improves firmness, elasticity, and bounce with patented alguronic acid, collagen, and microalgae oil.",
+        "brand": "Algenist",
+        "price": 98.00,
+        "ingredients": ["Water", "Collagen", "Algae Extract", "Caprylic/Capric Triglyceride"]
+      },
+      {
+        "id": 121,
+        "name": "Neutrogena Ultra Sheer Dry-Touch Sunscreen",
+        "category": "sunscreen",
+        "imageUrl": "https://ntg-catalog.imgix.net/products/6868790-carousel-1-2023-08.webp?fm=jpg&auto=format&w=1200&h=1443&fit=crop",
+        "description": "Lightweight SPF 55 sunscreen with a non-greasy finish.",
+        "brand": "Neutrogena",
+        "price": 9.99,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 122,
+        "name": "Dr. Jart+ Every Sun Day Mineral Sunscreen SPF 50+",
+        "category": "sunscreen",
+        "imageUrl": "https://www.drjart.com/media/export/cms/products/1000x1000/dj_sku_H5AW01_1000x1000_0.jpg",
+        "description": "Mineral-based sunscreen with SPF 50+ protection and a lightweight, non-greasy formula.",
+        "brand": "Dr. Jart+",
+        "price": 35,
+        "ingredients": ["Zinc Oxide", "Titanium Dioxide", "Water", "Cyclopentasiloxane", "Butylene Glycol"]
+      },
+      {
+        "id": 123,
+        "name": "EltaMD UV Clear Broad-Spectrum SPF 46",
+        "category": "sunscreen",
+        "imageUrl": "https://static.thcdn.com/images/large/original//productimg/1600/1600/11370303-8395107124712024.jpg",
+        "description": "Oil-free sunscreen with niacinamide for sensitive skin.",
+        "brand": "EltaMD",
+        "price": 43.00,
+        "ingredients": ["Zinc Oxide", "Octinoxate", "Niacinamide", "Hyaluronic Acid"]
+      },
+      {
+        "id": 124,
+        "name": "CeraVe Hydrating Mineral Sunscreen SPF 30",
+        "category": "sunscreen",
+        "imageUrl": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/products/pdp-updates-04-2021/hydrating-mineral-sunscreen-face-spf-30/700x875/sun-face-spf-30_tube_front_2021_700x875-v1alt.jpg?rev=6c8ab9f807f94154af1778a8430b4f41&w=500&hash=2CAF1C15B337310CD917C48E5C6A4C29",
+        "description": "Mineral sunscreen with ceramides and hyaluronic acid.",
+        "brand": "CeraVe",
+        "price": 16.99,
+        "ingredients": ["Titanium Dioxide", "Zinc Oxide", "Ceramides", "Hyaluronic Acid"]
+      },
+      {
+        "id": 125,
+        "name": "Supergoop! Unseen Sunscreen SPF 40",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/51FKZvokSbL._AC_UF1000,1000_QL80_.jpg",
+        "description": "Lightweight, invisible sunscreen with SPF 40 protection.",
+        "brand": "Supergoop!",
+        "price": 38.00,
+        "ingredients": ["Avobenzone", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 126,
+        "name": "Beauty of Joseon UV Essence Sunscreen",
+        "category": "sunscreen",
+        "imageUrl": "https://my-kare.com/cdn/shop/files/Beauty-of-Joseon-Relief-Sun-Rice-Probiotics_1200x.jpg?v=1712953692",
+        "description": "Lightweight sunscreen essence with SPF 50+ protection and skin-nourishing ingredients like green tea and centella asiatica.",
+        "brand": "Beauty of Joseon",
+        "price": 14.40,
+        "ingredients": ["Water", "Ethylhexyl Methoxycinnamate", "Titanium Dioxide", "Niacinamide", "Centella Asiatica Extract"]
+      },
+      {
+        "id": 127,
+        "name": "Australian Gold Botanical SPF 50 Tinted Face Sunscreen",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/61knhUlz2qL.jpg",
+        "description": "Mineral sunscreen with a tinted formula for face protection.",
+        "brand": "Australian Gold",
+        "price": 12.74,
+        "ingredients": ["Titanium Dioxide", "Zinc Oxide", "Iron Oxides", "Kakadu Plum Extract"]
+      },
+      {
+        "id": 128,
+        "name": "Aveeno Protect + Hydrate Sunscreen SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://www.aveeno.ca/sites/aveeno_ca_2/files/product-images/avefba_1_0.jpe",
+        "description": "Hydrating sunscreen lotion with SPF 50 protection.",
+        "brand": "Aveeno",
+        "price": 15.99,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 129,
+        "name": "Shiseido Ultimate Sun Protector Lotion SPF 60+",
+        "category": "sunscreen",
+        "imageUrl": "https://www.sephora.com/productimages/sku/s2742666-main-zoom.jpg?imwidth=315",
+        "description": "Invisible, lightweight sunscreen with WetForce technology.",
+        "brand": "Shiseido",
+        "price": 50.00,
+        "ingredients": ["Avobenzone", "Octinoxate", "Octocrylene"]
+      },
+      {
+        "id": 130,
+        "name": "Dr. Jart+ Every Sun Day Sun Fluid SPF 50+",
+        "category": "sunscreen",
+        "imageUrl": "https://www.drjart.com/media/export/cms/products/1000x1000/dj_sku_H5AX01_1000x1000_0.jpg",
+        "description": "Lightweight, oil-free sunscreen fluid with SPF 50+ protection and moisturizing properties.",
+        "brand": "Dr. Jart+",
+        "price": 30,
+        "ingredients": ["Water", "Ethylhexyl Methoxycinnamate", "Butylene Glycol", "Titanium Dioxide", "Alcohol"]
+      },
+      {
+        "id": 131,
+        "name": "Coppertone Sport Sunscreen Lotion SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/71I+WE0s1gL._AC_UF1000,1000_QL80_.jpg",
+        "description": "High-performance sunscreen for active lifestyles with SPF 50.",
+        "brand": "Coppertone",
+        "price": 2.29,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 132,
+        "name": "Biore UV Aqua Rich Watery Essence SPF 50+ PA++++",
+        "category": "sunscreen",
+        "imageUrl": "https://kokorojapanstore.com/cdn/shop/products/BIO10b_500x.jpg?v=1677051563",
+        "description": "Japanese sunscreen with lightweight, watery essence formulation.",
+        "brand": "Biore",
+        "price": 6.59,
+        "ingredients": ["Ethylhexyl Methoxycinnamate", "Diethylamino Hydroxybenzoyl Hexyl Benzoate", "Sodium Hyaluronate", "Royal Jelly Extract"]
+      },
+      {
+        "id": 133,
+        "name": "Alba Botanica Hawaiian Sunscreen SPF 45",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/71uBY3McVnL.jpg",
+        "description": "Reef-friendly sunscreen with botanical ingredients from Hawaii.",
+        "brand": "Alba Botanica",
+        "price": 19.65,
+        "ingredients": ["Homosalate", "Octocrylene", "Ethylhexyl Salicylate", "Butyl Methoxydibenzoylmethane"]
+      },
+      {
+        "id": 134,
+        "name": "Paula's Choice Essential Glow Moisturizer SPF 30",
+        "category": "sunscreen",
+        "imageUrl": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/en_US/dw0e464cbb/images/products/defense-essential-glow-moisturizer-spf-30-2230-L.png?sw=2000&sfrm=png",
+        "description": "Moisturizer with SPF 30 protection and antioxidants for a healthy glow.",
+        "brand": "Paula's Choice",
+        "price": 35.00,
+        "ingredients": ["Homosalate", "Octinoxate", "Octocrylene", "Vitamin C", "Licorice Root Extract"]
+      },
+      {
+        "id": 135,
+        "name": "Drunk Elephant Umbra Sheer Physical Daily Defense SPF 30",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/41oKlgrQOsL._AC_.jpg",
+        "description": "Physical sunscreen with antioxidant-rich ingredients for daily protection.",
+        "brand": "Drunk Elephant",
+        "price": 36.00,
+        "ingredients": ["Zinc Oxide", "Caprylic/Capric Triglyceride", "Sunflower Shoot Extract", "Astaxanthin"]
+      },
+      {
+        "id": 136,
+        "name": "Kiehl's Super Fluid Daily UV Defense SPF 50+",
+        "category": "sunscreen",
+        "imageUrl": "https://www.kiehls.com/dw/image/v2/AAFM_PRD/on/demandware.static/-/Sites-kiehls-master-catalog/default/dw4063a3a4/nextgen/sun-care/sunscreen/dermatologist-solutions/super-fluid-daily-uv-defense-spf-50/D0513982%20-%20KHLS%20-%20SFUV%20X%20MICRODOSE%20re%20support%20alt%20imagery%20-%20PACKSHOTS-SFUV-4.2%20-940x940.jpg?sw=320&sh=320&sm=cut&sfrm=png&q=70",
+        "description": "Ultra-lightweight, oil-free sunscreen with SPF 50+ protection.",
+        "brand": "Kiehl's",
+        "price": 47.00,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 137,
+        "name": "Neutrogena Hydro Boost Water Gel Lotion SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://ntg-catalog.imgix.net/products/6811342/6811342-front.webp?fm=jpg&auto=format&w=1200&h=1443&fit=crop",
+        "description": "Hydrating water gel lotion with SPF 50 protection.",
+        "brand": "Neutrogena",
+        "price": 17.99,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 138,
+        "name": "La Roche-Posay Anthelios Cooling Water-Lotion Sunscreen SPF 60",
+        "category": "sunscreen",
+        "imageUrl": "https://www.laroche-posay.us/dw/image/v2/AANG_PRD/on/demandware.static/-/Sites-acd-laroche-posay-master-catalog/default/dwfc81ecfc/product/March%202023%20packshot%20updates/Anthelios60_CoolingWater-Lotion_150ml.jpg",
+        "description": "Cooling water-lotion sunscreen with SPF 60 broad-spectrum protection.",
+        "brand": "La Roche-Posay",
+        "price": 37.99,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 139,
+        "name": "EltaMD UV Daily Broad-Spectrum SPF 40",
+        "category": "sunscreen",
+        "imageUrl": "https://static.thcdn.com/images/large/original//productimg/1600/1600/11370297-1945107124575275.jpg",
+        "description": "Daily facial sunscreen with hyaluronic acid and vitamin E.",
+        "brand": "EltaMD",
+        "price": 39.00,
+        "ingredients": ["Zinc Oxide", "Octinoxate", "Hyaluronic Acid", "Vitamin E"]
+      },
+      {
+        "id": 140,
+        "name": "CeraVe AM Facial Moisturizing Lotion SPF 30",
+        "category": "sunscreen",
+        "imageUrl": "https://www.cerave.com/-/media/project/loreal/brand-sites/cerave/americas/us/skincare/moisturizers/am-facial-moisturizing-lotion-with-sunscreen/photos/2022/700x785/cerave_am_facial_moisturizing_lotion_3oz-700x875-v1.jpg?rev=e1ea63691ec14380b614bb0a2474b366",
+        "description": "Facial moisturizing lotion with SPF 30 protection and ceramides.",
+        "brand": "CeraVe",
+        "price": 14.00,
+        "ingredients": ["Homosalate", "Octinoxate", "Octocrylene", "Ceramides"]
+      },
+      {
+        "id": 141,
+        "name": "Supergoop! Everyday Sunscreen SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://supergoop.com/cdn/shop/files/PLAY_71ml_Img1_new.jpg?v=1716987559",
+        "description": "Lightweight, broad-spectrum SPF 50 sunscreen for daily use.",
+        "brand": "Supergoop!",
+        "price": 36.00,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 142,
+        "name": "Banana Boat Simply Protect Sport Sunscreen SPF 50+",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/41EXhK7c6QL._AC_UF1000,1000_QL80_.jpg",
+        "description": "Reef-friendly sport sunscreen with SPF 50+ protection.",
+        "brand": "Banana Boat",
+        "price": 14.49,
+        "ingredients": ["Titanium Dioxide", "Zinc Oxide", "Octocrylene"]
+      },
+      {
+        "id": 143,
+        "name": "Australian Gold Botanical SPF 30 Kids Mineral Sunscreen Lotion",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/61tQr4Y-9DL.jpg",
+        "description": "Mineral sunscreen lotion with SPF 30 protection for kids.",
+        "brand": "Australian Gold",
+        "price": 12.39,
+        "ingredients": ["Titanium Dioxide", "Zinc Oxide", "Cocoa Seed Butter"]
+      },
+      {
+        "id": 144,
+        "name": "Aveeno Baby Continuous Protection Sensitive Skin Zinc Oxide Sunscreen SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/71IO+GWqP7L.jpg",
+        "description": "Gentle sunscreen with zinc oxide for sensitive baby skin.",
+        "brand": "Aveeno",
+        "price": 10,
+        "ingredients": ["Zinc Oxide", "Dimethicone", "Glycerin"]
+      },
+      {
+        "id": 145,
+        "name": "Shiseido Urban Environment Oil-Free UV Protector SPF 42",
+        "category": "sunscreen",
+        "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_98e05f7e-2bd5-40d0-83de-1559576e45af?wid=488&hei=488&fmt=pjpeg",
+        "description": "Oil-free sunscreen with SPF 42 protection for urban environments.",
+        "brand": "Shiseido",
+        "price": 50.00,
+        "ingredients": ["Octinoxate", "Octocrylene", "Zinc Oxide"]
+      },
+      {
+        "id": 146,
+        "name": "Neutrogena Ultra Sheer Face Mist Sunscreen SPF 55",
+        "category": "sunscreen",
+        "imageUrl": "https://ntg-catalog.imgix.net/products/6811296_MAIN.jpg?fm=jpg&auto=format&w=1200&h=1443&fit=crop",
+        "description": "Facial mist sunscreen with SPF 55 for easy application.",
+        "brand": "Neutrogena",
+        "price": 17.49,
+        "ingredients": ["Avobenzone", "Homosalate", "Octisalate", "Octocrylene"]
+      },
+      {
+        "id": 147,
+        "name": "Coppertone Pure & Simple Baby Sunscreen SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_ab6a317a-b542-4528-bec5-e25933d488b0?wid=488&hei=488&fmt=pjpeg",
+        "description": "Hypoallergenic sunscreen with zinc oxide for baby's delicate skin.",
+        "brand": "Coppertone",
+        "price": 9.59,
+        "ingredients": ["Zinc Oxide", "Titanium Dioxide", "Shea Butter"]
+      },
+      {
+        "id": 148,
+        "name": "Biore UV Perfect Milk SPF 50+ PA++++",
+        "category": "sunscreen",
+        "imageUrl": "https://i5.walmartimages.com/seo/KAO-BIORE-UV-Sunscreen-Perfect-Milk-SPF50-PA-Japanese-Version-7-5x2-5x18_9aaa959a-7582-400f-a05d-fe67fbc6266e.e3837111d76fb7b272d654b5491251ec.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF",
+        "description": "Japanese sunscreen milk with SPF 50+ PA++++ for oily skin.",
+        "brand": "Biore",
+        "price": 34.41,
+        "ingredients": ["Ethylhexyl Methoxycinnamate", "Zinc Oxide", "Alcohol"]
+      },
+      {
+        "id": 149,
+        "name": "Alba Botanica Sensitive Mineral Sunscreen Fragrance Free SPF 30",
+        "category": "sunscreen",
+        "imageUrl": "https://m.media-amazon.com/images/I/515szGRYLsL.jpg",
+        "description": "Fragrance-free mineral sunscreen with SPF 30 for sensitive skin.",
+        "brand": "Alba Botanica",
+        "price": 17.45,
+        "ingredients": ["Zinc Oxide", "Titanium Dioxide", "Aloe Vera", "Chamomile Extract"]
+      },
+      {
+        "id": 150,
+        "name": "Paula's Choice Resist Youth-Extending Daily Hydrating Fluid SPF 50",
+        "category": "sunscreen",
+        "imageUrl": "https://www.paulaschoice.com/dw/image/v2/BBNX_PRD/on/demandware.static/-/Sites-pc-catalog/default/dwf1ef77c1/images/products/resist-youth-extending-daily-hydrating-fluid-spf-50-7800-L.png?sw=2000&sfrm=png",
+        "description": "Hydrating fluid sunscreen with SPF 50 and antioxidants.",
+        "brand": "Paula's Choice",
+        "price": 39.00,
+        "ingredients": ["Octinoxate", "Avobenzone", "Tocopherol", "Resveratrol"]
+      }
+
+]
+}
+  
