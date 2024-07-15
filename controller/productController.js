@@ -1,4 +1,4 @@
-const productModel = require("../models/product");
+const productModel = require("../model/productModel");
 
 const getAllProducts = async (req, res) => {
   const { sort, category } = req.query;
