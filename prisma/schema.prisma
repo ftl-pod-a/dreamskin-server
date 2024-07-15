@@ -21,7 +21,7 @@ model Product {
   description   		String
   brand   		      String
   price        		  Float
-  ingredients   		String
+  ingredients       String[]
   likes         		Int      @default(0)
 
   //likedBy       User[]   @relation("UserLikesProduct")

@@ -2,7 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
 const getAllProducts = async (filter = {}, orderBy = {}) => {
-  return prisma.productgit .findMany({
+  return prisma.product.findMany({
     where: filter,
     orderBy: orderBy,
   });
