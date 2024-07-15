@@ -27,4 +27,3 @@ model Product {
   //likedBy       User[]   @relation("UserLikesProduct")
 }
 
-
