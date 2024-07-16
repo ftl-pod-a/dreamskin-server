@@ -46,5 +46,5 @@ model Comment {
   user                User     @relation("UserComments", fields: [user_id], references: [user_id])
   user_id             Int
   product             Product  @relation("ProductComments", fields: [product_id], references: [id])
-  product_id           Int
+  product_id          Int
 }
