@@ -24,6 +24,18 @@ model Product {
   ingredients       String[]
   likes         		Int      @default(0)
 
-  //likedBy       User[]   @relation("UserLikesProduct")
+  likedBy       User[]   @relation("UserLikesProduct")
 }
+
+model User {
+  user_id           	Int      @id @default(autoincrement())
+  google_id    		    Int      @unique
+  username    		    String
+  skinType     		    String   // Mandatory field to store the user's skin type
+  goals 			        String
+  concerns		        String
+
+  likedProducts Product[] @relation("UserLikesProduct")
+}
+
 
