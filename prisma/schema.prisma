@@ -25,6 +25,7 @@ model Product {
   likes         		Int      @default(0)
 
   likedBy       User[]   @relation("UserLikesProduct")
+  comments      Comment[] @relation("ProductComments")
 }
 
 model User {
@@ -35,7 +36,15 @@ model User {
   goals 			        String
   concerns		        String
 
-  likedProducts Product[] @relation("UserLikesProduct")
+  likedProducts   Product[] @relation("UserLikesProduct")
+  comments        Comment[] @relation("UserComments")
 }
 
-
+model Comment {
+  id                  Int      @id @default(autoincrement())
+  text                String
+  user                User     @relation("UserComments", fields: [user_id], references: [user_id])
+  user_id             Int
+  product             Product  @relation("ProductComments", fields: [product_id], references: [id])
+  product_id           Int
+}
