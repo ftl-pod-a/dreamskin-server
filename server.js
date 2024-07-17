@@ -3,12 +3,20 @@ const { OAuth2Client } = require("google-auth-library");
 const { google } = require("googleapis");
 const verifyToken = require("./middleware/auth");
 const cors = require('cors')
+const morgan = require("morgan");
+require("dotenv").config();
+const { rateLimiter } = require("./utils/security.js");
+const chatRoutes = require("./route/chatRoute.js");
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
+app.use(morgan("dev"));
+//use rate limiter here
+app.use(rateLimiter);
+
 app.use(cors({
   origin: "http://localhost:5173", // Adjust as per your frontend URL
 }));
@@ -72,6 +80,7 @@ app.use("/users", userRoutes);
 app.use("/products", productRoutes);
 // Routes
 app.use("/comments", commentRoutes);
+app.use("/api/chat", chatRoutes);
 
 // Start server
 app.listen(port, () => {
