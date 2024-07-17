@@ -1,6 +1,10 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 //import model
 const { getChatHistory, saveChatMessage } = require("../model/chatModel");
+////////////
+const { getAllProducts } = require("../model/productModel");
+//////////
+
 
 // get the GeminiAPI key from env file
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -40,6 +44,14 @@ const chatHandler = async (req, res) => {
 
     // -------------------------------------------------------
 
+    //NEW CODE MUGHT NOT WORK JUST TESTING 
+
+    // const ingredients = prompt.split(",")[0].replace(/^[^"]*"|"$|'/g, "").split(" has ")[1].trim();
+
+    // const products = await getAllProducts({ ingredients }, { name: 'asc' });
+
+    ////////////////////////////////////////
+
     res.json({
       prompt: prompt,
       response: chatResponse,
@@ -47,7 +59,7 @@ const chatHandler = async (req, res) => {
     });
   } catch (error) {
     console.error(error);
-    
+
     res.status(500).send("Something went wrong");
   }
 };

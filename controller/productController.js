@@ -21,6 +21,51 @@ const getAllProducts = async (req, res) => {
   }
 }
 
+
+//NEW CODE MIGHT NOT WORK JUST TESTING 
+
+// const getAllProducts = async (req, res) => {
+//     const { sort, category } = req.query;
+//     const { response } = req.body; // Assuming 'response' contains the array of ingredients
+  
+//     let filter = {};
+//     let orderBy = {};
+  
+//     if (category) {
+//       filter.category = category;
+//     }
+  
+//     if (sort) {
+//       orderBy = { price: sort === "price" ? "asc" : "asc" }; // Corrected sorting logic
+//     }
+  
+//     try {
+//       // Fetch products based on category
+//       let products = await productModel.getAllProducts(filter, orderBy);
+  
+//       // Filter products further by ingredients if 'response' array exists
+//       if (response && Array.isArray(response) && response.length > 0) {
+//         const ingredientNames = response.map(ingredient => ingredient.name); // Adjust according to your data structure
+  
+//         // Query products with matching ingredients
+//         products = products.filter(product =>
+//           product.ingredients.every(ingredient =>
+//             ingredientNames.includes(ingredient.name)
+//           )
+//         );
+//       }
+  
+//       res.status(200).json(products);
+//     } catch (error) {
+//       res.status(400).json({ error: error.message });
+//     }
+//   };
+
+
+
+
+///////////////////////
+
 const getProductById = async (req, res) => {
   try {
     const product = await productModel.getProductById(req.params.id);

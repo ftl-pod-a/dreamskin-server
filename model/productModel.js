@@ -23,6 +23,35 @@ const getAllProducts = async (filter = {}, orderBy = {}) => {
   }
 };
 
+//NEW CODE MIGHT NOT WORK JUST TESTING 
+
+// const getAllProducts = async (category, ingredients, orderBy = {}) => {
+//   try {
+//     const products = await prisma.product.findMany({
+//       where: {
+//         category,
+//         ingredients: {
+//           every: {
+//             name: {
+//               in: ingredients,
+//             },
+//           },
+//         },
+//       },
+//       orderBy: orderBy,
+//       include: {
+//         comments: true, // Include comments related to each product
+//         // category: true, // Include category information for each product
+//       },
+//     });
+//     return products;
+//   } catch (error) {
+//     throw new Error(`Failed to fetch products: ${error.message}`);
+//   }
+// };
+
+///////////////////////
+
 const getProductById = async (id) => {
   return prisma.product.findUnique({ where: { id: parseInt(id) } });
 };
