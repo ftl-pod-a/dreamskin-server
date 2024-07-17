@@ -81,7 +81,10 @@ app.use("/products", productRoutes);
 // Routes
 app.use("/comments", commentRoutes);
 app.use("/api/chat", chatRoutes);
-
+app.get("/", (req, res) => {
+    res.send("Hello from the other side");
+  });
+  
 // Start server
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);

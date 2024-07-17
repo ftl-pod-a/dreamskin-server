@@ -7,3 +7,4 @@ const { chatHandler } = require("../controller/chatController");
 router.post("/", chatHandler);
 
 module.exports = router;
+

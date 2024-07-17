@@ -9,6 +9,9 @@ const getChatHistory = async (conversationId) => {
   });
 };
 
+
+
+
 const saveChatMessage = async (conversationId, prompt, response) => {
   await prisma.chat.create({
     data: {
