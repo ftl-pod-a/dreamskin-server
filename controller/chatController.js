@@ -1,6 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 //import model
-const { getChatHistory, saveChatMessage } = require("../models/chatModel");
+const { getChatHistory, saveChatMessage } = require("../model/chatModel");
 
 // get the GeminiAPI key from env file
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
