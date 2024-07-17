@@ -21,8 +21,9 @@ const redirectUrl = "http://localhost:3000/auth/google/callback";
 const oauth2Client = new OAuth2Client(clientId, clientSecret, redirectUrl);
 
 // Routes
-const userRoutes = require("./route/userRoute");
+const userRoutes = require("./route/userRoute.js");
 const productRoutes = require("./route/productRoute");
+const commentRoutes = require("./route/commentRoute")
 
 // Protected route example
 app.get("/protected_route", verifyToken, (req, res) => {
@@ -69,6 +70,8 @@ app.get("/auth/google/callback", async (req, res) => {
 // Routes
 app.use("/users", userRoutes);
 app.use("/products", productRoutes);
+// Routes
+app.use("/comments", commentRoutes);
 
 // Start server
 app.listen(port, () => {

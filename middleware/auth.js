@@ -21,13 +21,27 @@ async function verifyToken(req, res, next) {
       audience: process.env.GOOGLE_CLIENT_ID,
     });
     const payload = ticket.getPayload();
-    console.log(payload)
-    req.user = payload; // Attach user information to the request
+    const { sub: google_id, email } = payload;
+
+    // Check if user exists in database, create if not
+    let user = await prisma.user.findUnique({
+      where: { google_id },
+    });
+    if (!user) {
+      user = await prisma.user.create({
+        data: {
+          google_id,
+          email,
+          username: email.split("@")[0], // Example: Use email prefix as username
+        },
+      });
+    }
+
+    req.user = { userId: user.user_id, username: user.username }; // Attach user information to the request
     next(); // Proceed to the next middleware or route handler
   } catch (e) {
     return res.sendStatus(403); // Invalid token
   }
-
 }
 
 module.exports = verifyToken;

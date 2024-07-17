@@ -1,11 +1,26 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
+// const getAllProducts = async (filter = {}, orderBy = {}) => {
+//   return prisma.product.findMany({
+//     where: filter,
+//     orderBy: orderBy,
+//   });
+// };
+
 const getAllProducts = async (filter = {}, orderBy = {}) => {
-  return prisma.product.findMany({
-    where: filter,
-    orderBy: orderBy,
-  });
+  try {
+    const products = await prisma.product.findMany({
+      where: filter,
+      orderBy: orderBy,
+      include: {
+        comments: true, // Include comments related to each product
+      },
+    });
+    return products;
+  } catch (error) {
+    throw new Error(`Failed to fetch products: ${error.message}`);
+  }
 };
 
 const getProductById = async (id) => {
