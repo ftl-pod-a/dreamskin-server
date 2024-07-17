@@ -48,3 +48,7 @@ model Comment {
   product             Product  @relation("ProductComments", fields: [product_id], references: [id])
   product_id          Int
 }
+
+
+
+
