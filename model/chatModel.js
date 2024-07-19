@@ -10,20 +10,24 @@ const getChatHistory = async (conversationId) => {
 };
 
 
-
-
 const saveChatMessage = async (conversationId, prompt, response) => {
-  await prisma.chat.create({
-    data: {
-      conversationId,
-      prompt,
-      response,
-    },
-  });
-};
-
-
-//add enpoint to get a list of ingredients in an array
+    try {
+      await prisma.chat.create({
+        data: {
+          conversationId,
+          prompt,
+          response,
+        },
+      });
+  
+      console.log("Saved chat message with response:", response);
+  
+      return response; 
+    } catch (error) {
+      console.error("Error saving chat message:", error);
+      throw new Error("Failed to save chat message");
+    }
+  };
 
 module.exports = {
   getChatHistory,

@@ -64,6 +64,69 @@ const getAllProducts = async (req, res) => {
 
 
 
+const searchProducts = async (req, res) => {
+    try {
+      let json = require('../data/products.json');
+      json = json.products;
+      const t = ["Hyaluronic Acid"]
+      //console.log(json.filter((ingred) => ingred.ingredients.includes("Hyaluronic Acid")));
+
+      const ingredientsToCheck = req.body.ingredients;
+      //console.log("ingredients", ingredientsToCheck);
+
+        const filteredJson = json.filter((ingred) =>
+        ingredientsToCheck.some((ingredient) => ingred.ingredients.includes(ingredient))
+        );
+
+        const cleansers = filteredJson.filter(product => product.category === 'cleanser');
+        const moisturizers = filteredJson.filter(product => product.category === 'moisturizer');
+        const balm = filteredJson.filter(product => product.category === 'balm');
+        const sunscreen = filteredJson.filter(product => product.category === 'sunscreen');
+        console.log("Sunscreen", sunscreen[0])
+        console.log("Balm", balm[0])
+        console.log("Moist", moisturizers[0], moisturizers[1])
+        console.log("cleansers", cleansers[0], cleansers[1])
+
+        const newProducts = {
+            sunscreen: sunscreen[0],
+            balm: balm[0],
+            moisturizers: [moisturizers[0], moisturizers[1]],
+            cleansers: [cleansers[0], cleansers[1]]
+        }
+
+    //   const { response, conversationId } = req.body;
+      //console.log(req.body)
+    //   console.log(conversationId)
+    //   if (!response || !Array.isArray(response)) {
+    //     return res.status(400).json({ error: 'Invalid or missing response in request body' });
+    //   }
+      // Trim and lowercase each ingredient for consistency
+    //   const ingredients = response.map(ingredient => ingredient.trim().toLowerCase());
+      // Save the chat message and response to database (optional, if needed)
+      // await saveChatMessage(conversationId, "Prompt for product search", JSON.stringify(response));
+      // Query products based on ingredients
+    //   const products = await productModel.getProductsByIngredients(ingredients);
+    //   console.log('Products:', products); // Log the products to see what you're fetching
+      // Example filtering: Get 2 cleansers, 2 moisturizers, 1 balm, 1 sunscreen
+    //   const cleansers = products.filter(product => product.category === 'Cleanser').slice(0, 2);
+    //   const moisturizers = products.filter(product => product.category === 'Moisturizer').slice(0, 2);
+    //   const balm = products.find(product => product.category === 'Balm');
+    //   const sunscreen = products.find(product => product.category === 'Sunscreen');
+      // Example result format
+    //   const result = {
+    //     cleansers,
+    //     moisturizers,
+    //     balm,
+    //     sunscreen,
+    //   };
+      res.status(200).json(newProducts);
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      res.status(500).json({ error: 'Failed to fetch products' });
+    }
+  };
+
+
 ///////////////////////
 
 const getProductById = async (req, res) => {
@@ -122,4 +185,5 @@ module.exports = {
     createProduct,
     updateProduct,
     deleteProduct,
+    searchProducts
   };

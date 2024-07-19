@@ -32,10 +32,11 @@ model User {
   user_id           	Int      @id @default(autoincrement())
   google_id    		    Int      @unique
   username    		    String
-  skinType     		    String   // Mandatory field to store the user's skin type
+  skinType     		    String   
   goals 			        String
   concerns		        String
-
+  
+  
   likedProducts   Product[] @relation("UserLikesProduct")
   comments        Comment[] @relation("UserComments")
 }
@@ -57,7 +58,13 @@ model Chat {
   createdAt           DateTime @default(now())
 }
 
+// model Routine {
+//   routine_id   Int      @id @default(autoincrement())
+//   name         String
+//   user_id      Int      // This field stores the user ID
+//   amRoutineId  Int      // Field to store the ID of the AM routine in User
+//   pmRoutineId  Int      // Field to store the ID of the PM routine in User
 
-
+// }
 
 
