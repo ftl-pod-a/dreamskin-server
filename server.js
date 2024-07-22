@@ -53,12 +53,7 @@ app.use(cors({
 const userRoutes = require("./route/userRoute.js");
 const productRoutes = require("./route/productRoute");
 const commentRoutes = require("./route/commentRoute");
-
-
-
-
-
-
+const articleRoutes = require("./route/articleRoute")
 
 // Protected route example
 // app.get("/protected_route", verifyToken, (req, res) => {
@@ -113,6 +108,9 @@ app.use("/api/chat", chatRoutes);
 app.get("/", (req, res) => {
     res.send("Hello from the other side");
   });
+app.use('/articles',articleRoutes)
+
+
   
 // Start server
 app.listen(port, () => {

@@ -58,6 +58,15 @@ model Chat {
   createdAt           DateTime @default(now())
 }
 
+//article model
+
+model Article {
+  articleId            Int      @id @default(autoincrement())
+  articleCategory      String
+  articleTitle         String
+  articleUrl           String
+}
+
 // model Routine {
 //   routine_id   Int      @id @default(autoincrement())
 //   name         String
