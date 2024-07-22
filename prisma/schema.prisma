@@ -29,12 +29,12 @@ model Product {
 }
 
 model User {
-  user_id           	Int      @id @default(autoincrement())
-  google_id    		    Int      @unique
-  username    		    String
-  skinType     		    String   
-  goals 			        String
-  concerns		        String
+  user_id           	Int         @id @default(autoincrement())
+  username    		    String      @unique
+  password    		    String
+  skinType     		    String?
+  goals 			        String? 
+  concerns		        String?
   
   
   likedProducts   Product[] @relation("UserLikesProduct")
