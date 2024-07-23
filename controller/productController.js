@@ -1,4 +1,6 @@
 const productModel = require("../model/productModel");
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
 
 const getAllProducts = async (req, res) => {
   const { sort, category } = req.query;
@@ -20,49 +22,6 @@ const getAllProducts = async (req, res) => {
     res.status(400).json( {error: error.message} )
   }
 }
-
-
-//NEW CODE MIGHT NOT WORK JUST TESTING 
-
-// const getAllProducts = async (req, res) => {
-//     const { sort, category } = req.query;
-//     const { response } = req.body; // Assuming 'response' contains the array of ingredients
-  
-//     let filter = {};
-//     let orderBy = {};
-  
-//     if (category) {
-//       filter.category = category;
-//     }
-  
-//     if (sort) {
-//       orderBy = { price: sort === "price" ? "asc" : "asc" }; // Corrected sorting logic
-//     }
-  
-//     try {
-//       // Fetch products based on category
-//       let products = await productModel.getAllProducts(filter, orderBy);
-  
-//       // Filter products further by ingredients if 'response' array exists
-//       if (response && Array.isArray(response) && response.length > 0) {
-//         const ingredientNames = response.map(ingredient => ingredient.name); // Adjust according to your data structure
-  
-//         // Query products with matching ingredients
-//         products = products.filter(product =>
-//           product.ingredients.every(ingredient =>
-//             ingredientNames.includes(ingredient.name)
-//           )
-//         );
-//       }
-  
-//       res.status(200).json(products);
-//     } catch (error) {
-//       res.status(400).json({ error: error.message });
-//     }
-//   };
-
-
-
 
 const searchProducts = async (req, res) => {
     try {
@@ -94,31 +53,6 @@ const searchProducts = async (req, res) => {
             cleansers: [cleansers[0], cleansers[1]]
         }
 
-    //   const { response, conversationId } = req.body;
-      //console.log(req.body)
-    //   console.log(conversationId)
-    //   if (!response || !Array.isArray(response)) {
-    //     return res.status(400).json({ error: 'Invalid or missing response in request body' });
-    //   }
-      // Trim and lowercase each ingredient for consistency
-    //   const ingredients = response.map(ingredient => ingredient.trim().toLowerCase());
-      // Save the chat message and response to database (optional, if needed)
-      // await saveChatMessage(conversationId, "Prompt for product search", JSON.stringify(response));
-      // Query products based on ingredients
-    //   const products = await productModel.getProductsByIngredients(ingredients);
-    //   console.log('Products:', products); // Log the products to see what you're fetching
-      // Example filtering: Get 2 cleansers, 2 moisturizers, 1 balm, 1 sunscreen
-    //   const cleansers = products.filter(product => product.category === 'Cleanser').slice(0, 2);
-    //   const moisturizers = products.filter(product => product.category === 'Moisturizer').slice(0, 2);
-    //   const balm = products.find(product => product.category === 'Balm');
-    //   const sunscreen = products.find(product => product.category === 'Sunscreen');
-      // Example result format
-    //   const result = {
-    //     cleansers,
-    //     moisturizers,
-    //     balm,
-    //     sunscreen,
-    //   };
       res.status(200).json(newProducts);
     } catch (error) {
       console.error('Error fetching products:', error);
@@ -179,11 +113,73 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+const likeProduct = async (req, res) => {
+  const { userId } = req.body;
+  const { id: productId } = req.params;
+
+  try {
+    // Check if the product exists
+    const product = await prisma.product.findUnique({
+      where: { id: parseInt(productId) },
+    });
+
+    if (!product) {
+      return res.status(404).json({ error: 'Product not found' });
+    }
+
+    // Check if the user exists and fetch their likedProducts
+    const user = await prisma.user.findUnique({
+      where: { user_id: parseInt(userId) },
+      include: {
+        likedProducts: true,
+      },
+    });
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    // Check if the user has already liked the product
+    const alreadyLiked = user.likedProducts.some(p => p.id === parseInt(productId));
+
+    if (alreadyLiked) {
+      return res.status(400).json({ error: 'User has already liked this product' });
+    }
+
+    // Connect the user to the product (like the product)
+    await prisma.user.update({
+      where: { user_id: parseInt(userId) },
+      data: {
+        likedProducts: {
+          connect: { id: parseInt(productId) },
+        },
+      },
+    });
+
+    // Increment the product likes count
+    const updatedProduct = await prisma.product.update({
+      where: { id: parseInt(productId) },
+      data: {
+        likes: {
+          increment: 1,
+        },
+      },
+    });
+
+    res.status(200).json({ likes: updatedProduct.likes });
+  } catch (error) {
+    console.error('Error in likeProduct:', error.message);
+    res.status(500).json({ error: 'Failed to like product' });
+  }
+};
+
 module.exports = {
     getAllProducts,
     getProductById,
     createProduct,
     updateProduct,
     deleteProduct,
-    searchProducts
+    searchProducts,
+    likeProduct
+  
   };

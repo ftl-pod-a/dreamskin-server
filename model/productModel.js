@@ -1,12 +1,6 @@
-const { PrismaClient } = require("@prisma/client");
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-// const getAllProducts = async (filter = {}, orderBy = {}) => {
-//   return prisma.product.findMany({
-//     where: filter,
-//     orderBy: orderBy,
-//   });
-// };
 
 const getAllProducts = async (filter = {}, orderBy = {}) => {
   try {
@@ -22,33 +16,6 @@ const getAllProducts = async (filter = {}, orderBy = {}) => {
     throw new Error(`Failed to fetch products: ${error.message}`);
   }
 };
-
-//NEW CODE MIGHT NOT WORK JUST TESTING 
-
-// const getAllProducts = async (category, ingredients, orderBy = {}) => {
-//   try {
-//     const products = await prisma.product.findMany({
-//       where: {
-//         category,
-//         ingredients: {
-//           every: {
-//             name: {
-//               in: ingredients,
-//             },
-//           },
-//         },
-//       },
-//       orderBy: orderBy,
-//       include: {
-//         comments: true, // Include comments related to each product
-//         // category: true, // Include category information for each product
-//       },
-//     });
-//     return products;
-//   } catch (error) {
-//     throw new Error(`Failed to fetch products: ${error.message}`);
-//   }
-// };
 
 ///////////////////////
 
@@ -113,11 +80,52 @@ const deleteProduct = async (id) => {
   return prisma.product.delete({ where: { id: parseInt(id) } });
 };
 
+const likeProduct = async (userId, productId) => {
+  try {
+    const existingLike = await prisma.userProductLike.findUnique({
+      where: {
+        userId_productId: {
+          userId: parseInt(userId),
+          productId: parseInt(productId),
+        },
+      },
+    });
+
+    if (existingLike) {
+      throw new Error('User has already liked this product');
+    }
+
+    await prisma.userProductLike.create({
+      data: {
+        userId: parseInt(userId),
+        productId: parseInt(productId),
+      },
+    });
+
+    const updatedProduct = await prisma.product.update({
+      where: { id: parseInt(productId) },
+      data: {
+        likes: {
+          increment: 1,
+        },
+      },
+    });
+
+    return updatedProduct.likes;
+  } catch (error) {
+    throw new Error(`Failed to like product: ${error.message}`);
+  }
+};
+
+
+
 module.exports = {
   getAllProducts,
   getProductById,
   createProduct,
   updateProduct,
   deleteProduct,
-  searchProducts
+  searchProducts,
+  likeProduct
+  
 };

@@ -12,4 +12,12 @@ const verifyToken = require("../middleware/webhookHandler");
 // // DELETE /comments/:commentId - Delete a comment
 // router.delete("/:commentId", verifyToken, commentController.deleteComment);
 
+router.post("/", commentController.createComment);
+
+// GET /comments/product/:productId - Get all comments for a product
+router.get("/product/:productId", commentController.getProductComments);
+
+// DELETE /comments/:commentId - Delete a comment
+router.delete("/:commentId", commentController.deleteComment);
+
 module.exports = router;
