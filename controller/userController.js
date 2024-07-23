@@ -68,45 +68,10 @@ const {
   createUser,
   findUserByUsername,
   findUserById,
+  updateUserById,
+  deleteUserById,
+
 } = require("../model/userModel");
-
-// REgister User
-// const register = async (req, res) => {
-//   const { username, password } = req.body;
-//   //   console.log("username", username, "password", password);
-//   try {
-//     // hash the password using bcrypt and salt factor 10
-//     const hashedPassword = await bcrypt.hash(password, 10);
-//     // user model to be saved using the hashedpassword
-//     const user = await createUser(username, hashedPassword);
-//     res.status(201).json(user);
-//   } catch (error) {
-//     res
-//       .status(400)
-//       .json({ error: "User register error, maybe the user exists" });
-//   }
-// };
-
-// // Login User
-// // user exists?
-// // password correct?
-// const login = async (req, res) => {
-//   const { username, password } = req.body;
-//   const user = await findUserByUsername(username);
-//   if (user && (await bcrypt.compare(password, user.password))) {
-//     // create a json web token
-//     const token = jwt.sign(
-//       { userId: user.user_id, userName: user.username }, //as a token encode info and respond to the client
-//       "SECRET KEY" //setup env variable for secret key
-//     );
-//     res.status(200).json({ token });
-//   } else {
-//     res.status(401).json({ error: "Invalid Credentials" });
-//   }
-// };
-
-// //export:
-// module.exports = { register, login };
 
 const register = async (req, res) => {
     const { username, password, skinType, goals, concerns } = req.body;
@@ -133,6 +98,7 @@ const register = async (req, res) => {
       const token = jwt.sign(
         { userId: user.user_id, username: user.username },
         process.env.JWT_SECRET
+        // "SECRET KEY"
       );
   
       res.status(200).json({ token });
@@ -141,5 +107,40 @@ const register = async (req, res) => {
       res.status(500).json({ error: "Internal server error" });
     }
   };
+  const updateUser = async (req, res) => {
+    const user_id = parseInt(req.params.user_id); // Assuming user_id is passed as a route parameter
+    const { username, skinType, goals, concerns } = req.body;
   
-  module.exports = { register, login };
+    try {
+      const updatedUser = await updateUserById(user_id, {
+        username,
+        skinType,
+        goals,
+        concerns,
+      });
+      res.status(200).json(updatedUser);
+    } catch (error) {
+      console.error(`Error updating user with id ${user_id}:`, error);
+      res.status(500).json({ error: "Failed to update user" });
+    }
+  };
+  
+  // Delete a user
+  const deleteUser = async (req, res) => {
+    const user_id = parseInt(req.params.user_id); // Assuming user_id is passed as a route parameter
+  
+    try {
+      await deleteUserById(user_id);
+      res.status(204).end(); // Successfully deleted, no content to return
+    } catch (error) {
+      console.error(`Error deleting user with id ${user_id}:`, error);
+      res.status(500).json({ error: "Failed to delete user" });
+    }
+  };
+  
+  module.exports = {
+    register,
+    login,
+    updateUser,
+    deleteUser,
+  };

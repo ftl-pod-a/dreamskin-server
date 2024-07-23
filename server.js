@@ -60,6 +60,7 @@ const commentRoutes = require("./route/commentRoute");
 
 
 
+
 // Protected route example
 // app.get("/protected_route", verifyToken, (req, res) => {
 //   res.json({ message: "This is a protected route", user: req.user });
@@ -109,6 +110,7 @@ app.use("/products", productRoutes);
 // Routes
 app.use("/users", userRoutes);
 app.use("/comments", commentRoutes);
+
 app.use("/api/chat", chatRoutes);
 app.get("/", (req, res) => {
     res.send("Hello from the other side");
