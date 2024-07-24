@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(morgan("dev"));
 //use rate limiter here
-app.use(rateLimiter);
+// app.use(rateLimiter);
 
 
 app.use(cors({

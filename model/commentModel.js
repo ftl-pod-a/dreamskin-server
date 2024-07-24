@@ -72,12 +72,30 @@ const createComment = async ({ userId, productId, text }) => {
   }
 };
 
-// Get all comments for a product
+// Get all comments for a product THIS WORKS JUST TRYING
+// const getProductComments = async (productId) => {
+//   try {
+//     const comments = await prisma.comment.findMany({
+//       where: { product_id: productId },
+//       include: { user: true }, // Include user details in the response
+//     });
+//     return comments;
+//   } catch (error) {
+//     throw new Error(`Failed to fetch comments for product: ${error.message}`);
+//   }
+// };
+
 const getProductComments = async (productId) => {
   try {
     const comments = await prisma.comment.findMany({
       where: { product_id: productId },
-      include: { user: true }, // Include user details in the response
+      include: {
+        user: {
+          select: {
+            username: true // Include only the username field from the User model
+          }
+        }
+      }
     });
     return comments;
   } catch (error) {
