@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 
+
 const getAllProducts = async (filter = {}, orderBy = {}) => {
   try {
     const products = await prisma.product.findMany({
@@ -18,6 +19,32 @@ const getAllProducts = async (filter = {}, orderBy = {}) => {
 };
 
 ///////////////////////
+
+//PAGINATION FOR PRODUCT (HAS TO BE TESTED WITH FRONTEND)
+// const getAllProducts = async (filter = {}, orderBy = {}, skip = 0, take = 10) => {
+//   try {
+//     const products = await prisma.product.findMany({
+//       where: filter,
+//       orderBy: orderBy,
+//       include: {
+//         comments: true, // Include comments related to each product
+//       },
+//       skip: skip,
+//       take: take,
+//     });
+
+//     const totalCount = await prisma.product.count({
+//       where: filter,
+//     });
+
+//     return {
+//       products,
+//       totalCount,
+//     };
+//   } catch (error) {
+//     throw new Error(`Failed to fetch products: ${error.message}`);
+//   }
+// };
 
 const searchProducts = async (req, res) => {
   try {
