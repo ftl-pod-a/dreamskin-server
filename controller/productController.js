@@ -71,8 +71,10 @@ const searchProducts = async (req, res) => {
         const newProducts = {
             sunscreen: sunscreen[0],
             balm: balm[0],
-            moisturizers: [moisturizers[0], moisturizers[1]],
-            cleansers: [cleansers[0], cleansers[1]]
+            morning_moisturizers: moisturizers[0],
+            night_moisturizers:  moisturizers[1],
+            morning_cleansers: cleansers[0],
+            night_cleansers: cleansers[1]
         }
 
       res.status(200).json(newProducts);
