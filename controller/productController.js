@@ -23,6 +23,28 @@ const getAllProducts = async (req, res) => {
   }
 }
 
+//PAGINATION FOR PRODUCT (HAS TO BE TESTED WITH FRONTEND)
+// const getAllProducts = async (req, res) => {
+//   const { sort, category, skip = 0, take = 10 } = req.query;
+//   let filter = {};
+//   let orderBy = {};
+
+//   if (category) {
+//     filter.category = category;
+//   }
+
+//   if (sort) {
+//     orderBy = { price: sort === "price" ? "asc" : "desc" };
+//   }
+
+//   try {
+//     const { products, totalCount } = await productModel.getAllProducts(filter, orderBy, +skip, +take);
+//     res.status(200).json({ products, totalCount });
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// };
+
 const searchProducts = async (req, res) => {
     try {
       let json = require('../data/products.json');
