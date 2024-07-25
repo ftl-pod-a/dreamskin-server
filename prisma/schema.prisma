@@ -51,6 +51,7 @@ model Comment {
   user_id             Int
   product             Product  @relation("ProductComments", fields: [product_id], references: [id])
   product_id          Int
+  
 }
 
 model Chat {
