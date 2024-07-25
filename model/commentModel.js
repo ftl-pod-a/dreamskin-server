@@ -56,13 +56,15 @@ const prisma = new PrismaClient();
 // };
 
 
-const createComment = async ({ userId, productId, text }) => {
+const createComment = async ({ userId, productId, text, username }) => {
   try {
     const comment = await prisma.comment.create({
       data: {
         text,
         user_id: userId,
         product_id: productId,
+        username: username
+       
       },
       include: { user: true, product: true }, // Include related user and product details
     });
@@ -116,9 +118,24 @@ const deleteComment = async (commentId) => {
     throw new Error(`Failed to delete comment: ${error.message}`);
   }
 };
+//////-----------------------------
+// const updateComment = async ({ commentId, text }) => {
+//   try {
+//     const updatedComment = await prisma.comment.update({
+//       where: { id: commentId },
+//       data: { text },
+//       include: { user: true, product: true }, // Include related user and product details
+//     });
+//     return updatedComment;
+//   } catch (error) {
+//     throw new Error(`Failed to update comment: ${error.message}`);
+//   }
+// };
 
 module.exports = {
   createComment,
   getProductComments,
   deleteComment,
+  //////
+  // updateComment
 };

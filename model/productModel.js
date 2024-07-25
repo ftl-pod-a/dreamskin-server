@@ -107,42 +107,119 @@ const deleteProduct = async (id) => {
   return prisma.product.delete({ where: { id: parseInt(id) } });
 };
 
+// const likeProduct = async (userId, productId) => {
+//   try {
+//     const existingLike = await prisma.userProductLike.findUnique({
+//       where: {
+//         userId_productId: {
+//           userId: parseInt(userId),
+//           productId: parseInt(productId),
+//         },
+//       },
+//     });
+
+//     if (existingLike) {
+//       throw new Error('User has already liked this product');
+//     }
+
+//     await prisma.userProductLike.create({
+//       data: {
+//         userId: parseInt(userId),
+//         productId: parseInt(productId),
+//       },
+//     });
+
+//     const updatedProduct = await prisma.product.update({
+//       where: { id: parseInt(productId) },
+//       data: {
+//         likes: {
+//           increment: 1,
+//         },
+//       },
+//     });
+
+//     return updatedProduct.likes;
+//   } catch (error) {
+//     throw new Error(`Failed to like product: ${error.message}`);
+//   }
+// };
+
 const likeProduct = async (userId, productId) => {
   try {
-    const existingLike = await prisma.userProductLike.findUnique({
-      where: {
-        userId_productId: {
-          userId: parseInt(userId),
-          productId: parseInt(productId),
-        },
-      },
-    });
+    // Convert IDs to integers
+    const userIdParsed = parseInt(userId, 10);
+    const productIdParsed = parseInt(productId, 10);
 
-    if (existingLike) {
-      throw new Error('User has already liked this product');
+    // Validate IDs
+    if (isNaN(userIdParsed) || isNaN(productIdParsed)) {
+      throw new Error('Invalid user ID or product ID.');
     }
 
-    await prisma.userProductLike.create({
-      data: {
-        userId: parseInt(userId),
-        productId: parseInt(productId),
-      },
+    // Check if the user has already liked the product
+    const user = await prisma.user.findUnique({
+      where: { user_id: userIdParsed },
+      include: { likedProducts: true },
     });
 
-    const updatedProduct = await prisma.product.update({
-      where: { id: parseInt(productId) },
-      data: {
-        likes: {
-          increment: 1,
+    if (!user) {
+      throw new Error('User not found.');
+    }
+
+    const hasLiked = user.likedProducts.some(product => product.id === productIdParsed);
+
+    let updatedProduct;
+
+    if (hasLiked) {
+      // User has already liked the product, so remove the like
+      await prisma.user.update({
+        where: { user_id: userIdParsed },
+        data: {
+          likedProducts: {
+            disconnect: { id: productIdParsed },
+          },
         },
-      },
-    });
+      });
+
+      // Decrement the product likes count
+      updatedProduct = await prisma.product.update({
+        where: { id: productIdParsed },
+        data: {
+          likes: {
+            decrement: 1,
+          },
+        },
+      });
+    } else {
+      // User has not liked the product, so add the like
+      await prisma.user.update({
+        where: { user_id: userIdParsed },
+        data: {
+          likedProducts: {
+            connect: { id: productIdParsed },
+          },
+        },
+      });
+
+      // Increment the product likes count
+      updatedProduct = await prisma.product.update({
+        where: { id: productIdParsed },
+        data: {
+          likes: {
+            increment: 1,
+          },
+        },
+      });
+    }
 
     return updatedProduct.likes;
   } catch (error) {
-    throw new Error(`Failed to like product: ${error.message}`);
+    console.error(`Failed to toggle like on product: ${error.message}`);
+    throw new Error(`Failed to toggle like on product: ${error.message}`);
   }
 };
+
+
+
 
 
 
