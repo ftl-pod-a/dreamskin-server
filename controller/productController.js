@@ -47,15 +47,16 @@ const getAllProducts = async (req, res) => {
 
 const searchProducts = async (req, res) => {
     try {
-      let json = require('../data/products.json');
-      json = json.products;
-      const t = ["Hyaluronic Acid"]
+      // let json = require('../data/products.json');
+      // json = json.products;
+      // const t = ["Hyaluronic Acid"]
+      const products = await productModel.getAllProducts();
       //console.log(json.filter((ingred) => ingred.ingredients.includes("Hyaluronic Acid")));
 
       const ingredientsToCheck = req.body.ingredients;
       //console.log("ingredients", ingredientsToCheck);
 
-        const filteredJson = json.filter((ingred) =>
+        const filteredJson = products.filter((ingred) =>
         ingredientsToCheck.some((ingredient) => ingred.ingredients.includes(ingredient))
         );
 
@@ -69,13 +70,13 @@ const searchProducts = async (req, res) => {
         console.log("cleansers", cleansers[0], cleansers[1])
 
         const newProducts = {
-            sunscreen: sunscreen[0],
-            balm: balm[0],
-            morning_moisturizers: moisturizers[0],
-            night_moisturizers:  moisturizers[1],
-            morning_cleansers: cleansers[0],
-            night_cleansers: cleansers[1]
-        }
+          0: cleansers[0],
+          1: cleansers[1],
+          2: balm[0],
+          3: moisturizers[0],
+          4: moisturizers[1],
+          5: sunscreen[0]
+      }
 
       res.status(200).json(newProducts);
     } catch (error) {

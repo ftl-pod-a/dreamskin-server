@@ -1,8 +1,32 @@
 const routineModel = require("../model/routineModel");
 
+
+const getAllRoutines = async (req, res) => {
+    const { sort, category } = req.query;
+    let filter = {};
+    let orderBy = {};
+  
+    if (category){
+      filter.category = category;
+    }
+  
+    if (sort) {
+      orderBy = { price: sort == "price" ? "asc" : "asc"};
+    }
+  
+    try {
+      const products = await routineModel.getAllRoutines(filter, orderBy);
+      res.status(200).json(products);
+    } catch (error){
+      res.status(400).json( {error: error.message} )
+    }
+}
+
+
+
 const getRoutineById = async (req, res) => {
     try {
-        const routine = await routineModel.getRoutineById(req.params.routine_id);
+        const routine = await routineModel.getRoutineById(req.params.user_id);
         if (routine) {
           res.status(200).json(routine);
         } else {
@@ -53,6 +77,7 @@ const deleteRoutine = async (req, res) => {
 
 
 module.exports = {
+    getAllRoutines,
     createRoutine,
     getRoutineById,
     updateRoutine,
