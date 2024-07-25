@@ -7,21 +7,59 @@ const getAllProducts = async (req, res) => {
   let filter = {};
   let orderBy = {};
 
-  if (category){
+  if (category) {
     filter.category = category;
   }
 
   if (sort) {
-    orderBy = { price: sort == "price" ? "asc" : "asc"};
+    // Adjust orderBy to sort by likes
+    orderBy = { likes: sort === 'likes' ? 'desc' : 'asc' };
   }
-
   try {
-    const products = await productModel.getAllProducts(filter, orderBy);
+    const products = await prisma.product.findMany({
+      where: filter,
+      orderBy: orderBy,
+      include: {
+        comments: true, // Include comments related to each product
+      },
+    });
     res.status(200).json(products);
-  } catch (error){
-    res.status(400).json( {error: error.message} )
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-}
+};
+
+//   try {
+//     const products = await productModel.getAllProducts(filter, orderBy);
+//     res.status(200).json(products);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// };
+
+
+// const getAllProducts = async (req, res) => {
+//   const { sort, category } = req.query;
+//   let filter = {};
+//   let orderBy = {};
+
+//   if (category){
+//     filter.category = category;
+//   }
+
+//   if (sort) {
+//     orderBy = { price: sort == "price" ? "asc" : "asc"};
+//   }
+
+//   try {
+//     const products = await productModel.getAllProducts(filter, orderBy);
+//     res.status(200).json(products);
+//   } catch (error){
+//     res.status(400).json( {error: error.message} )
+//   }
+// }
+
+
 
 //PAGINATION FOR PRODUCT (HAS TO BE TESTED WITH FRONTEND)
 // const getAllProducts = async (req, res) => {
@@ -138,65 +176,82 @@ const deleteProduct = async (req, res) => {
   }
 };
 
+// const likeProduct = async (req, res) => {
+//   const { userId } = req.body;
+//   const { id: productId } = req.params;
+
+//   try {
+//     // Check if the product exists
+//     const product = await prisma.product.findUnique({
+//       where: { id: parseInt(productId) },
+//     });
+
+//     if (!product) {
+//       return res.status(404).json({ error: 'Product not found' });
+//     }
+
+//     // Check if the user exists and fetch their likedProducts
+//     const user = await prisma.user.findUnique({
+//       where: { user_id: parseInt(userId) },
+//       include: {
+//         likedProducts: true,
+//       },
+//     });
+
+//     if (!user) {
+//       return res.status(404).json({ error: 'User not found' });
+//     }
+
+//     // Check if the user has already liked the product
+//     const alreadyLiked = user.likedProducts.some(p => p.id === parseInt(productId));
+
+//     if (alreadyLiked) {
+//       return res.status(400).json({ error: 'User has already liked this product' });
+//     }
+
+//     // Connect the user to the product (like the product)
+//     await prisma.user.update({
+//       where: { user_id: parseInt(userId) },
+//       data: {
+//         likedProducts: {
+//           connect: { id: parseInt(productId) },
+//         },
+//       },
+//     });
+
+//     // Increment the product likes count
+//     const updatedProduct = await prisma.product.update({
+//       where: { id: parseInt(productId) },
+//       data: {
+//         likes: {
+//           increment: 1,
+//         },
+//       },
+//     });
+
+//     res.status(200).json({ likes: updatedProduct.likes });
+//   } catch (error) {
+//     console.error('Error in likeProduct:', error.message);
+//     res.status(500).json({ error: 'Failed to like product' });
+//   }
+// };
+
+
 const likeProduct = async (req, res) => {
   const { userId } = req.body;
   const { id: productId } = req.params;
 
   try {
-    // Check if the product exists
-    const product = await prisma.product.findUnique({
-      where: { id: parseInt(productId) },
-    });
+    // Call the model function to handle toggling the like
+    const updatedLikesCount = await productModel.likeProduct(userId, productId);
 
-    if (!product) {
-      return res.status(404).json({ error: 'Product not found' });
-    }
-
-    // Check if the user exists and fetch their likedProducts
-    const user = await prisma.user.findUnique({
-      where: { user_id: parseInt(userId) },
-      include: {
-        likedProducts: true,
-      },
-    });
-
-    if (!user) {
-      return res.status(404).json({ error: 'User not found' });
-    }
-
-    // Check if the user has already liked the product
-    const alreadyLiked = user.likedProducts.some(p => p.id === parseInt(productId));
-
-    if (alreadyLiked) {
-      return res.status(400).json({ error: 'User has already liked this product' });
-    }
-
-    // Connect the user to the product (like the product)
-    await prisma.user.update({
-      where: { user_id: parseInt(userId) },
-      data: {
-        likedProducts: {
-          connect: { id: parseInt(productId) },
-        },
-      },
-    });
-
-    // Increment the product likes count
-    const updatedProduct = await prisma.product.update({
-      where: { id: parseInt(productId) },
-      data: {
-        likes: {
-          increment: 1,
-        },
-      },
-    });
-
-    res.status(200).json({ likes: updatedProduct.likes });
+    res.status(200).json({ likes: updatedLikesCount });
   } catch (error) {
     console.error('Error in likeProduct:', error.message);
-    res.status(500).json({ error: 'Failed to like product' });
+    res.status(500).json({ error: 'Failed to toggle like on product' });
   }
 };
+
 
 module.exports = {
     getAllProducts,

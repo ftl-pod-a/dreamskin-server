@@ -86,8 +86,22 @@ const deleteComment = async (req, res) => {
   }
 };
 
+////---------------------------------------
+// const updateComment = async (req, res) => {
+//   const { commentId } = req.params;
+//   const { text } = req.body;
+
+//   try {
+//     const updatedComment = await commentModel.updateComment({ commentId: parseInt(commentId), text });
+//     res.status(200).json(updatedComment);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// };
+
 module.exports = {
   createComment,
   getProductComments,
   deleteComment,
+  // updateComment
 };
