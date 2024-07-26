@@ -166,20 +166,17 @@ const searchProducts = async (req, res) => {
 
         const cleansers = filteredJson.filter(product => product.category === 'cleanser');
         const moisturizers = filteredJson.filter(product => product.category === 'moisturizer');
-        const balm = filteredJson.filter(product => product.category === 'balm');
         const sunscreen = filteredJson.filter(product => product.category === 'sunscreen');
         console.log("Sunscreen", sunscreen[0])
-        console.log("Balm", balm[0])
         console.log("Moist", moisturizers[0], moisturizers[1])
         console.log("cleansers", cleansers[0], cleansers[1])
 
         const newProducts = {
-          0: cleansers[0],
-          1: cleansers[1],
-          2: balm[0],
-          3: moisturizers[0],
-          4: moisturizers[1],
-          5: sunscreen[0]
+          0: cleansers[0], // morning cleanser
+          1: cleansers[1], // night cleanser
+          2: moisturizers[0], // morning moisturizer
+          3: moisturizers[1], // night moisturizer
+          4: sunscreen[0] // sunscreen
       }
 
       res.status(200).json(newProducts);

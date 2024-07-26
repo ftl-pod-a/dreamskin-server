@@ -16,7 +16,6 @@ const addProduct = async (product) => {
 products.forEach((product) => {
     delete product.id
     console.log(product);
-    product.name.replace("'")
-    //addProduct(product);
+    addProduct(product);
 })
 console.log("Products added");
