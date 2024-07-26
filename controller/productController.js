@@ -2,32 +2,98 @@ const productModel = require("../model/productModel");
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+//TESTING IT WORKS ON POSTMAN
 const getAllProducts = async (req, res) => {
-  const { sort, category } = req.query;
+  const { sort, category, name, page = 1, pageSize = 10 } = req.query;
+
   let filter = {};
   let orderBy = {};
 
+  // Filter by category
   if (category) {
     filter.category = category;
   }
 
+  // Filter by name (with partial match)
+  if (name) {
+    filter.name = {
+      contains: name,
+      mode: 'insensitive', // Case-insensitive search
+    };
+  }
+
+  // Sorting
   if (sort) {
-    // Adjust orderBy to sort by likes
     orderBy = { likes: sort === 'likes' ? 'desc' : 'asc' };
   }
+
   try {
+    // Pagination settings
+    const skip = (parseInt(page) - 1) * parseInt(pageSize);
+    const take = parseInt(pageSize);
+
+    // Fetch products with filters, sorting, and pagination
     const products = await prisma.product.findMany({
       where: filter,
       orderBy: orderBy,
+      skip: skip,
+      take: take,
       include: {
         comments: true, // Include comments related to each product
       },
     });
-    res.status(200).json(products);
+
+    // Count total number of products for pagination
+    const totalCount = await prisma.product.count({
+      where: filter,
+    });
+
+    // Response with pagination info
+    res.status(200).json({
+      products,
+      pagination: {
+        totalCount,
+        totalPages: Math.ceil(totalCount / pageSize),
+        currentPage: parseInt(page),
+        pageSize: parseInt(pageSize),
+      },
+    });
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
+
+
+
+
+
+//THIS WORKS BUT WANTING TO ADD SEARCH BY NAME AND PAGINATION
+// const getAllProducts = async (req, res) => {
+//   const { sort, category } = req.query;
+//   let filter = {};
+//   let orderBy = {};
+
+//   if (category) {
+//     filter.category = category;
+//   }
+
+//   if (sort) {
+//     // Adjust orderBy to sort by likes
+//     orderBy = { likes: sort === 'likes' ? 'desc' : 'asc' };
+//   }
+//   try {
+//     const products = await prisma.product.findMany({
+//       where: filter,
+//       orderBy: orderBy,
+//       include: {
+//         // comments: true, // Include comments related to each product
+//       },
+//     });
+//     res.status(200).json(products);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
+// };
 
 //   try {
 //     const products = await productModel.getAllProducts(filter, orderBy);
