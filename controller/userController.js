@@ -79,12 +79,8 @@ const register = async (req, res) => {
     try {
       const hashedPassword = await bcrypt.hash(password, 10);
       const user = await createUser(username, hashedPassword, skinType, goals, concerns);
-      const token = jwt.sign(
-        { userId: user.user_id, username: user.username },
-        process.env.JWT_SECRET
-      );
-  
-      res.status(200).json({ token });
+
+      res.status(200).json(user);
     } catch (error) {
       console.error("User register error:", error);
       res.status(400).json({ error: "Failed to register user" });
