@@ -1,8 +1,6 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-
-
 const getAllProducts = async (filter = {}, orderBy = {}) => {
   try {
     const products = await prisma.product.findMany({
@@ -17,34 +15,6 @@ const getAllProducts = async (filter = {}, orderBy = {}) => {
     throw new Error(`Failed to fetch products: ${error.message}`);
   }
 };
-
-///////////////////////
-
-//PAGINATION FOR PRODUCT (HAS TO BE TESTED WITH FRONTEND)
-// const getAllProducts = async (filter = {}, orderBy = {}, skip = 0, take = 10) => {
-//   try {
-//     const products = await prisma.product.findMany({
-//       where: filter,
-//       orderBy: orderBy,
-//       include: {
-//         comments: true, // Include comments related to each product
-//       },
-//       skip: skip,
-//       take: take,
-//     });
-
-//     const totalCount = await prisma.product.count({
-//       where: filter,
-//     });
-
-//     return {
-//       products,
-//       totalCount,
-//     };
-//   } catch (error) {
-//     throw new Error(`Failed to fetch products: ${error.message}`);
-//   }
-// };
 
 const searchProducts = async (req, res) => {
   try {
@@ -106,43 +76,6 @@ const updateProduct = async (id, productData) => {
 const deleteProduct = async (id) => {
   return prisma.product.delete({ where: { id: parseInt(id) } });
 };
-
-// const likeProduct = async (userId, productId) => {
-//   try {
-//     const existingLike = await prisma.userProductLike.findUnique({
-//       where: {
-//         userId_productId: {
-//           userId: parseInt(userId),
-//           productId: parseInt(productId),
-//         },
-//       },
-//     });
-
-//     if (existingLike) {
-//       throw new Error('User has already liked this product');
-//     }
-
-//     await prisma.userProductLike.create({
-//       data: {
-//         userId: parseInt(userId),
-//         productId: parseInt(productId),
-//       },
-//     });
-
-//     const updatedProduct = await prisma.product.update({
-//       where: { id: parseInt(productId) },
-//       data: {
-//         likes: {
-//           increment: 1,
-//         },
-//       },
-//     });
-
-//     return updatedProduct.likes;
-//   } catch (error) {
-//     throw new Error(`Failed to like product: ${error.message}`);
-//   }
-// };
 
 const likeProduct = async (userId, productId) => {
   try {
@@ -218,11 +151,6 @@ const likeProduct = async (userId, productId) => {
   }
 };
 
-
-
-
-
-
 module.exports = {
   getAllProducts,
   getProductById,
@@ -231,5 +159,4 @@ module.exports = {
   deleteProduct,
   searchProducts,
   likeProduct
-  
 };

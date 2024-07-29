@@ -2,7 +2,6 @@ const productModel = require("../model/productModel");
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-//TESTING IT WORKS ON POSTMAN
 const getAllProducts = async (req, res) => {
   const { sort, category, name, page = 1, pageSize = 10 } = req.query;
 
@@ -63,102 +62,11 @@ const getAllProducts = async (req, res) => {
   }
 };
 
-
-
-
-
-//THIS WORKS BUT WANTING TO ADD SEARCH BY NAME AND PAGINATION
-// const getAllProducts = async (req, res) => {
-//   const { sort, category } = req.query;
-//   let filter = {};
-//   let orderBy = {};
-
-//   if (category) {
-//     filter.category = category;
-//   }
-
-//   if (sort) {
-//     // Adjust orderBy to sort by likes
-//     orderBy = { likes: sort === 'likes' ? 'desc' : 'asc' };
-//   }
-//   try {
-//     const products = await prisma.product.findMany({
-//       where: filter,
-//       orderBy: orderBy,
-//       include: {
-//         // comments: true, // Include comments related to each product
-//       },
-//     });
-//     res.status(200).json(products);
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
-
-//   try {
-//     const products = await productModel.getAllProducts(filter, orderBy);
-//     res.status(200).json(products);
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
-
-
-// const getAllProducts = async (req, res) => {
-//   const { sort, category } = req.query;
-//   let filter = {};
-//   let orderBy = {};
-
-//   if (category){
-//     filter.category = category;
-//   }
-
-//   if (sort) {
-//     orderBy = { price: sort == "price" ? "asc" : "asc"};
-//   }
-
-//   try {
-//     const products = await productModel.getAllProducts(filter, orderBy);
-//     res.status(200).json(products);
-//   } catch (error){
-//     res.status(400).json( {error: error.message} )
-//   }
-// }
-
-
-
-//PAGINATION FOR PRODUCT (HAS TO BE TESTED WITH FRONTEND)
-// const getAllProducts = async (req, res) => {
-//   const { sort, category, skip = 0, take = 10 } = req.query;
-//   let filter = {};
-//   let orderBy = {};
-
-//   if (category) {
-//     filter.category = category;
-//   }
-
-//   if (sort) {
-//     orderBy = { price: sort === "price" ? "asc" : "desc" };
-//   }
-
-//   try {
-//     const { products, totalCount } = await productModel.getAllProducts(filter, orderBy, +skip, +take);
-//     res.status(200).json({ products, totalCount });
-//   } catch (error) {
-//     res.status(400).json({ error: error.message });
-//   }
-// };
-
 const searchProducts = async (req, res) => {
     try {
-      // let json = require('../data/products.json');
-      // json = json.products;
-      // const t = ["Hyaluronic Acid"]
       const products = await productModel.getAllProducts();
-      //console.log(json.filter((ingred) => ingred.ingredients.includes("Hyaluronic Acid")));
 
       const ingredientsToCheck = req.body.ingredients;
-      //console.log("ingredients", ingredientsToCheck);
 
         const filteredJson = products.filter((ingred) =>
         ingredientsToCheck.some((ingredient) => ingred.ingredients.includes(ingredient))
@@ -184,10 +92,7 @@ const searchProducts = async (req, res) => {
       console.error('Error fetching products:', error);
       res.status(500).json({ error: 'Failed to fetch products' });
     }
-  };
-
-
-///////////////////////
+};
 
 const getProductById = async (req, res) => {
   try {
@@ -239,67 +144,6 @@ const deleteProduct = async (req, res) => {
   }
 };
 
-// const likeProduct = async (req, res) => {
-//   const { userId } = req.body;
-//   const { id: productId } = req.params;
-
-//   try {
-//     // Check if the product exists
-//     const product = await prisma.product.findUnique({
-//       where: { id: parseInt(productId) },
-//     });
-
-//     if (!product) {
-//       return res.status(404).json({ error: 'Product not found' });
-//     }
-
-//     // Check if the user exists and fetch their likedProducts
-//     const user = await prisma.user.findUnique({
-//       where: { user_id: parseInt(userId) },
-//       include: {
-//         likedProducts: true,
-//       },
-//     });
-
-//     if (!user) {
-//       return res.status(404).json({ error: 'User not found' });
-//     }
-
-//     // Check if the user has already liked the product
-//     const alreadyLiked = user.likedProducts.some(p => p.id === parseInt(productId));
-
-//     if (alreadyLiked) {
-//       return res.status(400).json({ error: 'User has already liked this product' });
-//     }
-
-//     // Connect the user to the product (like the product)
-//     await prisma.user.update({
-//       where: { user_id: parseInt(userId) },
-//       data: {
-//         likedProducts: {
-//           connect: { id: parseInt(productId) },
-//         },
-//       },
-//     });
-
-//     // Increment the product likes count
-//     const updatedProduct = await prisma.product.update({
-//       where: { id: parseInt(productId) },
-//       data: {
-//         likes: {
-//           increment: 1,
-//         },
-//       },
-//     });
-
-//     res.status(200).json({ likes: updatedProduct.likes });
-//   } catch (error) {
-//     console.error('Error in likeProduct:', error.message);
-//     res.status(500).json({ error: 'Failed to like product' });
-//   }
-// };
-
-
 const likeProduct = async (req, res) => {
   const { userId } = req.body;
   const { id: productId } = req.params;
@@ -315,7 +159,6 @@ const likeProduct = async (req, res) => {
   }
 };
 
-
 module.exports = {
     getAllProducts,
     getProductById,
@@ -325,4 +168,4 @@ module.exports = {
     searchProducts,
     likeProduct
   
-  };
+};

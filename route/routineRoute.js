@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const routineController = require("../controller/routineController");
 
-
 router.get("/", routineController.getAllRoutines);
 //creates a routine
 router.post("/", routineController.createRoutine);
@@ -12,6 +11,5 @@ router.get("/:user_id", routineController.getRoutineById);
 router.put("/:routine_id", routineController.updateRoutine);
 //deletes a routine by its id 
 router.delete("/:routine_id", routineController.deleteRoutine);
-
 
 module.exports = router;

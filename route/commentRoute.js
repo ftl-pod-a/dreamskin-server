@@ -3,7 +3,6 @@ const router = express.Router();
 const commentController = require("../controller/commentController");
 const verifyToken = require("../middleware/webhookHandler");
 
-
 router.post("/", commentController.createComment);
 
 // GET /comments/product/:productId - Get all comments for a product
@@ -13,5 +12,4 @@ router.get("/product/:productId", commentController.getProductComments);
 router.delete("/:commentId", commentController.deleteComment);
 
 // router.put("/:commentId", commentController.updateComment);
-
 module.exports = router;

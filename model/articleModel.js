@@ -11,7 +11,6 @@ const getAllArticles = async(filter = {}, orderBy = {}) => {
 };
 
 //Function gets all the products by Id 
-
 const getArticleById = async (id) => {
     return prisma.article.findUnique({ 
         where: { 
@@ -30,4 +29,4 @@ module.exports = {
     getAllArticles,
     getArticleById,
     createArticle,
-  };
+};

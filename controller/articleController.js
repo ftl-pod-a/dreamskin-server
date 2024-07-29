@@ -1,7 +1,6 @@
 const articleModel = require("../model/articleModel")
 
 //getAllArticles 
-
 const getAllArticles = async (req, res) => {
     const { articleCategory } = req.query;
 

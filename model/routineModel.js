@@ -1,7 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 
-
 const getAllRoutines = async (filter = {}, orderBy = {}) => {
     try {
       const routines = await prisma.routine.findMany({
@@ -50,5 +49,5 @@ module.exports = {
     createRoutine,
     getAllRoutines,
     getRoutineById
-  };
+};
   
