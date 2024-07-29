@@ -1,21 +1,14 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 //import model
 const { getChatHistory, saveChatMessage } = require("../model/chatModel");
-////////////
-const { getAllProducts } = require("../model/productModel");
-//////////
-
 
 // get the GeminiAPI key from env file
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // chat handler function to handle chat prompts and response
 const chatHandler = async (req, res) => {
-  const { prompt, conversationId } = req.body;
-
-  if (!prompt) {
-    return res.status(400).send("Prompt is empty - it is required");
-  }
+  const { userResponse, conversationId } = req.body;
+  let prompt = `This user has ${userResponse[0]} and they are dealing with ${userResponse[1]}, they are hoping to ${userResponse[2]}. What are the best ingredients for this user, only provide the name of ingredients in an array`;
 
   try {
     let messages = [
@@ -41,16 +34,6 @@ const chatHandler = async (req, res) => {
     //new conversation id and saave the chat message to DB
     const newConversationId = conversationId || Date.now().toString();
     await saveChatMessage(newConversationId, prompt, chatResponse);
-
-    // -------------------------------------------------------
-
-    //NEW CODE MUGHT NOT WORK JUST TESTING 
-
-    // const ingredients = prompt.split(",")[0].replace(/^[^"]*"|"$|'/g, "").split(" has ")[1].trim();
-
-    // const products = await getAllProducts({ ingredients }, { name: 'asc' });
-
-    ////////////////////////////////////////
 
     res.json({
       prompt: prompt,
