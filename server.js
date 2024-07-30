@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 
 
 app.use(cors({
-  origin: "http://localhost:5173", // Adjust as per your frontend URL
+  origin: "https://dreamskin.onrender.com/", // Adjust as per your frontend URL
 }));
 
 // Routes
