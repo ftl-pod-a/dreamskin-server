@@ -12,11 +12,11 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(morgan("dev"));
 //use rate limiter here
-app.use(rateLimiter);
+// app.use(rateLimiter);
 
 
 app.use(cors({
-  origin: "http://localhost:5173", // Adjust as per your frontend URL
+  origin: "http://localhost:5174", // Adjust as per your frontend URL
 }));
 
 // Routes

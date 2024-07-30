@@ -88,8 +88,10 @@ const likeProduct = async (userId, productId) => {
       throw new Error('Invalid user ID or product ID.');
     }
 
+    const updatedProduct = await prisma.$transaction(async (tx) => {
+    // const updateUserLikes = await prisma.$transaction
     // Check if the user has already liked the product
-    const user = await prisma.user.findUnique({
+    const user = await tx.user.findUnique({
       where: { user_id: userIdParsed },
       include: { likedProducts: true },
     });
@@ -104,7 +106,7 @@ const likeProduct = async (userId, productId) => {
 
     if (hasLiked) {
       // User has already liked the product, so remove the like
-      await prisma.user.update({
+      await tx.user.update({
         where: { user_id: userIdParsed },
         data: {
           likedProducts: {
@@ -114,7 +116,7 @@ const likeProduct = async (userId, productId) => {
       });
 
       // Decrement the product likes count
-      updatedProduct = await prisma.product.update({
+      updatedProduct = await tx.product.update({
         where: { id: productIdParsed },
         data: {
           likes: {
@@ -124,7 +126,7 @@ const likeProduct = async (userId, productId) => {
       });
     } else {
       // User has not liked the product, so add the like
-      await prisma.user.update({
+      await tx.user.update({
         where: { user_id: userIdParsed },
         data: {
           likedProducts: {
@@ -134,7 +136,7 @@ const likeProduct = async (userId, productId) => {
       });
 
       // Increment the product likes count
-      updatedProduct = await prisma.product.update({
+      updatedProduct = await tx.product.update({
         where: { id: productIdParsed },
         data: {
           likes: {
@@ -143,6 +145,10 @@ const likeProduct = async (userId, productId) => {
         },
       });
     }
+    return updatedProduct;  
+  }
+  )
+
 
     return updatedProduct.likes;
   } catch (error) {
