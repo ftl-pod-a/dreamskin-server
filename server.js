@@ -16,7 +16,7 @@ app.use(morgan("dev"));
 
 
 app.use(cors({
-  origin: "http://localhost:5174", // Adjust as per your frontend URL
+  origin: process.env.FRONTED_URL, // Adjust as per your frontend URL
 }));
 
 // Routes
