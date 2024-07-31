@@ -1,4 +1,5 @@
 const { PrismaClient } = require("@prisma/client");
+const { likeProduct } = require("./productModel");
 const prisma = new PrismaClient();
 
 const createUser = async (username, password, skinType, goals, concerns) => {
@@ -18,6 +19,7 @@ const findUserByUsername = async (username) => {
 const findUserById = async (user_id) => {
   return await prisma.user.findUnique({
     where: { user_id },
+    include: {likedProducts: true}
   });
 };
 

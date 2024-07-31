@@ -43,6 +43,21 @@ const login = async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 };
+
+const getUserById = async (req, res) => {
+  try {
+    const user = await findUserById(parseInt(req.params.user_id));
+    if (user) {
+      res.status(200).json(user);
+    } else {
+      res.status(404).json({ error: "User not found" });
+    }
+  } catch (error) {
+    res.status(400).json({ error: error.message });
+  }
+};
+
+
 const updateUser = async (req, res) => {
   const user_id = parseInt(req.params.user_id); // Assuming user_id is passed as a route parameter
   const { username, skinType, goals, concerns } = req.body;
@@ -79,4 +94,5 @@ module.exports = {
   login,
   updateUser,
   deleteUser,
+  getUserById
 };
