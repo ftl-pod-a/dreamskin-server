@@ -26,7 +26,8 @@ const getProductComments = async (productId) => {
       include: {
         user: {
           select: {
-            username: true // Include only the username field from the User model
+            username: true, // Include only the username field from the User model
+            user_id: true,
           }
         }
       }
