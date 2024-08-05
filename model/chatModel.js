@@ -19,7 +19,7 @@ const saveChatMessage = async (conversationId, prompt, response) => {
         },
       });
   
-      console.log("Saved chat message with response:", response);
+      
   
       return response; 
     } catch (error) {

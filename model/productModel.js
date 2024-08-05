@@ -18,7 +18,7 @@ const getAllProducts = async (filter = {}, orderBy = {}) => {
 
 const searchProducts = async (req, res) => {
   try {
-      console.log('Request Body:', req.body); // Check the entire request body to see if `response` is included
+       // Check the entire request body to see if `response` is included
       let { response, conversationId } = req.body;
   
       if (!response) {
@@ -34,7 +34,7 @@ const searchProducts = async (req, res) => {
     // Query products based on ingredients
     const products = await productModel.getProductsByIngredients(ingredients);
 
-    console.log('Products:', products);
+    
 
 
     // Example filtering: Get 2 cleansers, 2 moisturizers, 1 balm, 1 sunscreen
