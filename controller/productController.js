@@ -75,9 +75,7 @@ const searchProducts = async (req, res) => {
         const cleansers = filteredJson.filter(product => product.category === 'cleanser');
         const moisturizers = filteredJson.filter(product => product.category === 'moisturizer');
         const sunscreen = filteredJson.filter(product => product.category === 'sunscreen');
-        console.log("Sunscreen", sunscreen[0])
-        console.log("Moist", moisturizers[0], moisturizers[1])
-        console.log("cleansers", cleansers[0], cleansers[1])
+        
 
         const newProducts = {
           0: cleansers[0], // morning cleanser
@@ -131,9 +129,9 @@ const updateProduct = async (req, res) => {
 
 const deleteProduct = async (req, res) => {
   try {
-    console.log("params are", req.params.id);
+    
     const deletedProduct = await productModel.deleteProduct(req.params.id);
-    console.log("deleted", deletedProduct);
+    
     if (deletedProduct) {
       res.status(200).json(deletedProduct);
     } else {
