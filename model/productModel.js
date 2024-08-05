@@ -77,6 +77,7 @@ const deleteProduct = async (id) => {
   return prisma.product.delete({ where: { id: parseInt(id) } });
 };
 
+
 const likeProduct = async (userId, productId) => {
   try {
     // Convert IDs to integers
@@ -89,66 +90,74 @@ const likeProduct = async (userId, productId) => {
     }
 
     const updatedProduct = await prisma.$transaction(async (tx) => {
-    // const updateUserLikes = await prisma.$transaction
-    // Check if the user has already liked the product
-    const user = await tx.user.findUnique({
-      where: { user_id: userIdParsed },
-      include: { likedProducts: true },
+      // Check if the user has already liked the product
+      const user = await tx.user.findUnique({
+        where: { user_id: userIdParsed },
+        include: { likedProducts: true },
+      });
+
+      if (!user) {
+        throw new Error('User not found.');
+      }
+
+      const hasLiked = user.likedProducts.some(product => product.id === productIdParsed);
+
+      let updatedProduct;
+
+      if (hasLiked) {
+        // User has already liked the product, so remove the like
+        await tx.user.update({
+          where: { user_id: userIdParsed },
+          data: {
+            likedProducts: {
+              disconnect: { id: productIdParsed },
+            },
+          },
+        });
+
+        // Decrement the product likes count
+        updatedProduct = await tx.product.update({
+          where: { id: productIdParsed },
+          data: {
+            likes: {
+              decrement: 1,
+            },
+          },
+        });
+
+        // Ensure likes do not go below zero
+        if (updatedProduct.likes < 0) {
+          updatedProduct = await tx.product.update({
+            where: { id: productIdParsed },
+            data: {
+              likes: 0, // Set likes to zero if negative
+            },
+          });
+        }
+      } else {
+        // User has not liked the product, so add the like
+        await tx.user.update({
+          where: { user_id: userIdParsed },
+          data: {
+            likedProducts: {
+              connect: { id: productIdParsed },
+            },
+          },
+        });
+
+        // Increment the product likes count
+        updatedProduct = await tx.product.update({
+          where: { id: productIdParsed },
+          data: {
+            likes: {
+              increment: 1,
+            },
+          },
+        });
+      }
+
+      return updatedProduct;  
     });
-
-    if (!user) {
-      throw new Error('User not found.');
-    }
-
-    const hasLiked = user.likedProducts.some(product => product.id === productIdParsed);
-
-    let updatedProduct;
-
-    if (hasLiked) {
-      // User has already liked the product, so remove the like
-      await tx.user.update({
-        where: { user_id: userIdParsed },
-        data: {
-          likedProducts: {
-            disconnect: { id: productIdParsed },
-          },
-        },
-      });
-
-      // Decrement the product likes count
-      updatedProduct = await tx.product.update({
-        where: { id: productIdParsed },
-        data: {
-          likes: {
-            decrement: 1,
-          },
-        },
-      });
-    } else {
-      // User has not liked the product, so add the like
-      await tx.user.update({
-        where: { user_id: userIdParsed },
-        data: {
-          likedProducts: {
-            connect: { id: productIdParsed },
-          },
-        },
-      });
-
-      // Increment the product likes count
-      updatedProduct = await tx.product.update({
-        where: { id: productIdParsed },
-        data: {
-          likes: {
-            increment: 1,
-          },
-        },
-      });
-    }
-    return updatedProduct;  
-  }
-  )
-
 
     return updatedProduct.likes;
   } catch (error) {
@@ -156,6 +165,7 @@ const likeProduct = async (userId, productId) => {
     throw new Error(`Failed to toggle like on product: ${error.message}`);
   }
 };
+
 
 module.exports = {
   getAllProducts,

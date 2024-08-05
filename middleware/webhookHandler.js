@@ -3,7 +3,7 @@
 // // const { OAuth2Client } = require("google-auth-library");
 // // const clientId = process.env.GOOGLE_CLIENT_ID;
 // // const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
-// // const redirectUrl = "http://localhost:3000/auth/google/callback";
+// // const redirectUrl = "https://dreamskin-server-tzka.onrender.comauth/google/callback";
 
 // // const oauth2Client = new OAuth2Client(clientId, clientSecret, redirectUrl);
 

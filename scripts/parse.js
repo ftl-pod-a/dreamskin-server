@@ -4,7 +4,7 @@ let products = json.products;
 
 const addProduct = async (product) => {
     try {
-        const response = await axios.post("http://localhost:3000/products", product);
+        const response = await axios.post("https://dreamskin-server-tzka.onrender.com/products", product);
         console.log("Response", response.data);
 
     } catch (error) {
